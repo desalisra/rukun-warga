@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img width="100" class="img-fluid" src="img/smktelkomjakarta-logo-redi.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="visimisi.html">Visi Misi</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Jurusan
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="tr.html">Teknik Transmisi</a>
+                <a class="dropdown-item" href="akses.html">Teknik Jaringan Akses</a>
+                <a class="dropdown-item" href="tkj.html">Teknik Komputer Jaringan</a>
+                <a class="dropdown-item" href="rpl.html">Rekaya Prangkat Lunak</a>
+              </div>
+            </li>
+            <a class="nav-item nav-link" href="ppdb.html">PPDB</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+	<div class="navbar-top"></div>
+
+   <!-- Form PPDB -->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<form>
+						<h3>DATA CALON PESERTA DIDIK</h3>
+						<hr>
+						<div class="form-group">
+							<label for="formGroupExampleInput">Email</label>
+							<small id="emailHelp" class="form-text text-muted">(Email digunakan untuk menerima PIN pendaftaran, 1 email hanya untuk 1 pendaftar)</small>
+							<input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email yang Valid">
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Nama Lengkap*</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nama Lengkap Siswa" required>
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Tempat Lahir</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tempat Lahir">
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Tanggal lahir*</label>
+							<small id="emailHelp" class="form-text text-muted">(Klik untuk mengganti tanggal)</small>
+							<input type="date" class="form-control" id="formGroupExampleInput2" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="">Jenis Kelamin*</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						  <label class="form-check-label" for="inlineRadio1">Laki-Laki</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+						  <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Agama</label>
+							<select class="form-control">
+							  <option>-- Piliih Agama --</option>
+							  <option>Islam</option>
+							  <option>Kristen</option>
+							  <option>Hindu</option>
+							  <option>Budha</option>
+							  <option>Kepercayaan Kepda Tuhan yang Maha Esa</option>
+							</select>
+						</div>
+
+						<h3>DATA ORANG TUA</h3>
+						<hr>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Nama Orang Tua/Wali*</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nama Orang Tua/Wali">
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Alamat Rumah*</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Masukan Alamat Lengkap"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">No. HP Orang Tua*</label>
+							<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="XXXXXXXX">
+						</div>
+						<h3>LATAR BELAKANG PENDIDIKAN</h3>
+						<hr>
+						<div class="form-group">
+							<label for="formGroupExampleInput2">Asal Sekolah*</label>
+							<input name="" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nama Orang Tua/Wali">
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlTextarea1">Alamat Rumah*</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Masukan Alamat Lengkap"></textarea>
+						</div>
+
+						<h3>NILAI SKHUN SMP</h3>
+						<hr>
+						<table class="table table-striped">
+						  <thead>
+						    <tr>
+						      <th scope="col">#</th>
+						      <th width="70%" scope="col">Mata Pelajaran / Perolehan Nilai Untuk</th>
+						      <th width="15%" scope="col">Nilai Sekolah</th>
+						      <th width="15%" scope="col">Nilai UN</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row">1</th>
+						      <td>Bahasa Indonesia</td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						      <td>
+								<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <th scope="row">2</th>
+						      <td>Bahasa Inggris</td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						      <td>
+								<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <th scope="row">3</th>
+						      <td>Matematika</td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <th scope="row">4</th>
+						      <td>IPA</td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						      <td>
+						      	<div class="form-group">
+									<input name="" type="text" class="form-control" id="" >
+								</div>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+						<small>Saya setuju dan menyatakan bahwa data yang dimasukkan adalah benar dan dapat dipertanggungjawabkan.</small>
+						<small>Data yang sudah disimpan tidak dapat diubah lagi, sehingga pastikan data yang akan disimpan sudah benar.</small>
+						<br><br>
+						<button type="submit" class="btn btn-tombol btn-md">Daftar</button>
+						<button type="reset" class="btn btn-tombol btn-md">Batal</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+   <!-- End Form PPDB -->
+
+    <!-- Footer -->
+    <section class="jarak" id="footer-menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="img/smktelkomjakarta-logo-redi.png" alt="">
+            <p>SMK TELKOM JAKARTA</p>
+            <p>Sekolah Berintegritas yang bernaung di bawah Yayasan Pendidikan Telkom. 021-5442500/021-5442600/021-54394605 atau WA 08111442600 Jl. Daan mogot KM.11 Cengkareng Jakarta Barat Email : smkteljkt@ypt.or.id atau smkteljkt@gmail.com twitter : smktelkomjakarta</p>
+          </div>
+          <div class="col-lg-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63469.16527025466!2d106.750758!3d-6.154478000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3a809c8c4627262!2sSMK+Telkom+Jakarta!5e0!3m2!1sen!2sus!4v1554266909212!5m2!1sen!2sus" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <p>SMK Telkom Jakarta 2019</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- My Js -->
+    <script>
+      $('.carousel').carousel();
+    </script>
+  </body>
+</html>

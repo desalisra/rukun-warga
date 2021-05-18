@@ -1,0 +1,102 @@
+/*Global*/
+.jarak{
+	margin-top: 30px;
+}
+
+.navbar-top{
+	margin-top: 100px;
+}
+
+.vline{
+	border-left: 1px #dbdbdb solid;
+	color: red;
+	font-weight: bold;
+}
+
+.btn-tombol{
+	background: #dbdbdb !important;
+}
+
+.card-foto .card-body{
+	min-height: 300px;
+}
+
+.card-jurusan .card-body{
+	min-height: 400px;
+}
+
+/*Jumbotron*/
+#welcome{
+	color: #fff;
+	margin-top:70px; 
+	min-height: 350px;
+	background: rgba(0,0,0,0.5);
+	background-image: url(../img/back-telkom-schools.png); 
+	background-size: cover;
+}
+
+.jumbotron{
+	background: none;
+}
+
+
+/*content*/
+.tab-content{
+	padding: 20px;
+	background: #dbdbdb;
+}
+
+#content .card{
+	margin-bottom: 30px;
+}
+
+.daftar{
+	color: #fff;
+	background: #7EBEC5;
+}
+
+.daftar .btn{
+	margin-left: 40%;
+	border: 2px #fff solid;
+	border-radius: none;
+	color: #fff;
+}
+
+.daftar .btn:hover{
+	background:  #7EEEEE !important;
+}
+
+
+/*About*/
+.about{
+	background : linear-gradient(180deg,#ffffff 0%,#0c71c3 100%)!important;
+}
+
+.about .container{
+	background: #fff;
+}
+
+.about h1{
+	color: #808080
+}
+
+.foto{
+	width: 50%;
+	margin-left: 25%;
+}
+
+.btn-daftar{
+	margin-left: 45%;
+}
+
+#footer-menu{
+	background: #222;
+	color: #fff;
+	padding: 30px 0;
+}
+
+#footer{
+	background: #1f1f1f;
+	color:#666;
+	padding-top:20px; 
+}
