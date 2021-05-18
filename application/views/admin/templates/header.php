@@ -36,7 +36,7 @@
 					<a href="" class="navbar-brand">
 						<small>
 							<i class="fa fa-graduation-cap"></i>
-							Telkom Admin
+							Management RT
 						</small>
 					</a>
 				</div>
@@ -55,6 +55,12 @@
 							</a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="<?php echo base_url('admin/mProfil')?>">
+										<i class="ace-icon fa fa-user"></i>
+										Management Admin
+									</a>
+								</li>
 								<li>
 									<a href="<?php echo base_url('admin/logout')?>">
 										<i class="ace-icon fa fa-power-off"></i>

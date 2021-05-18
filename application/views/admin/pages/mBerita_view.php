@@ -7,7 +7,7 @@
 					<i class="fa fa-desktop"></i>
 					<a href="#">Master Web</a>
 				</li>
-				<li class="active">Berita Sekolah</li>
+				<li class="active">Pengumuman RT</li>
 			</ul><!-- /.breadcrumb -->
 			<div class="nav-search" id="nav-search">
 			</div><!-- /.nav-search -->
@@ -17,8 +17,7 @@
 				<div class="col-xs-12">
 					<div class="clearfix">
 						<h4 class="pink">
-							<i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
-							Berita Sekolah
+							Pengumuman Kegiatan
 							<div class="pull-right tableTools-container"></div>
 						</h4>
 
@@ -27,7 +26,7 @@
 					<div class="">
 						<a href="<?= base_url('mBerita/add')?>" class="btn btn-primary">
 							<i class="fa fa-plus" aria-hidden="true"></i>
-							Tambah Berita
+							Tambah Kegiatan
 						</a>
 					</div>
 					<!-- BATAS HEADER TITLE -->

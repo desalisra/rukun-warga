@@ -17,7 +17,6 @@
 				<div class="col-xs-12">
 					<div class="clearfix">
 						<h4 class="pink">
-							<i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
 							Visi Misi
 							<?= $this->session->flashdata('message'); ?>
 							<div class="pull-right tableTools-container"></div>

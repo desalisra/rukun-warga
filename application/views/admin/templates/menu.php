@@ -84,39 +84,23 @@
 				<a href="<?= base_url('mBerita')?>">
 					<i class="menu-icon fa fa-newspaper-o"></i>
 					<span class="menu-text">
-						Berita
+						Pengumuman
 					</span>
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
 
 			<li class="">
-				<a href="<?= base_url('mProfil')?>">
-					<i class="menu-icon fa fa-user"></i>
+				<a href="<?= base_url('MSurat')?>">
+					<i class="menu-icon fa fa-file-text"></i>
 					<span class="menu-text">
-						Management Admin
+						Surat
 					</span>
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
 
-			<li class="">
-				<a href="<?= base_url('mPPDB')?>"  class="dropdown-toggle">
-					<i class="menu-icon fa fa-users"></i>
-					<span class="menu-text"> PPDB </span>
-					<b class="arrow fa fa-angle-down"></b>
-				</a>
-				<b class="arrow"></b>
-				<ul class="submenu">
-					<li class="">
-						<a href="<?= base_url('mPPDB')?>">
-							<i class="menu-icon fa fa-caret-right"></i>
-							Daftar Siswa Baru
-						</a>
-						<b class="arrow"></b>
-					</li>
-				</ul>
-			</li>
+			
 			<li class="">
 				<a href="#" class="dropdown-toggle">
 					<i class="menu-icon fa fa-list"></i>

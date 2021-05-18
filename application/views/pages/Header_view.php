@@ -18,28 +18,29 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top my-bg">
   <div class="container">
-    <a class="navbar-brand" href="<?= site_url('pages')?>"><img width="100" class="img-fluid" src="<?= base_url('assets/img/smktelkomjakarta-logo-redi.png')?>" alt=""></a>
+    <a class="navbar-brand" href="<?= base_url('pages')?>"><img width="100" class="img-fluid" src="<?= base_url('assets/img/smktelkomjakarta-logo-redi.png')?>" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="<?= site_url('pages')?>">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="<?= site_url('pages/visimisi')?>">Visi Misi</a>
+        <a class="nav-item nav-link active" href="<?= base_url('pages')?>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="<?= base_url('pages/visimisi')?>">Visi Misi</a>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Jurusan
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <?php foreach($jurusan as $row){ ?>
-              <a class="dropdown-item" href="<?= site_url().'pages/jurusan/'.$row->id_jurusan?>">
+              <a class="dropdown-item" href="<?= base_url().'pages/jurusan/'.$row->id_jurusan?>">
                 <?= $row->nama_jurusan?>
               </a>
             <?php } ?>
           </div>
         </li>
-        <a class="nav-item nav-link" href="<?= site_url('pages/berita')?>">Berita</a>
-        <a class="nav-item nav-link" href="<?= site_url('pages/ppdb')?>">PPDB</a>
+        <a class="nav-item nav-link" href="<?= base_url('pages/berita')?>">Kegiatan</a>
+        <a class="nav-item nav-link" href="<?= base_url('pages/pengajuanSurat')?>">Pengajuan Surat</a>
+        <a class="nav-item nav-link" href="<?= base_url('admin')?>">Login</a>
       </div>
     </div>
   </div>

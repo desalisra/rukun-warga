@@ -15,16 +15,7 @@
 		<div class="page-content">
 			<div class="row">
 				<div class="col-xs-8">
-
-					<div class="clearfix">
-						<h4 class="pink">
-							Tambah Detail Jurusan
-							<div class="pull-right tableTools-container"></div>
-						</h4>
-					</div>
-					
 					<?php if($edit){ ?>
-
 						<form action="<?= base_url('mVisiMisi/edit')?>" method="post" enctype="multipart/form-data">
 							<input type="hidden" name="id" class="form-control" value="<?= $data->id_visimisi?>">
 							<div class="form-group">

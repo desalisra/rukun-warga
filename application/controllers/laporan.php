@@ -32,7 +32,7 @@ class laporan extends CI_Controller {
         }
     }
 
-    public function exportPDF($tglAwal,$tglAkhir) {
+    private function exportPDF($tglAwal,$tglAkhir) {
       include APPPATH.'third_party/fpdf181/fpdf.php';
 
       $pdf = new FPDF('l', 'mm', 'A4');
@@ -80,7 +80,7 @@ class laporan extends CI_Controller {
       $pdf->Output();
     } 
 
-    public function exportExcel($tglAwal,$tglAkhir)
+    public private exportExcel($tglAwal,$tglAkhir)
     {
         //load plugin
       include APPPATH.'third_party/PHPExcel/PHPExcel.php';

@@ -7,7 +7,7 @@
 					<i class="fa fa-desktop"></i>
 					<a href="#">Master Web</a>
 				</li>
-				<li class="active">PPDB</li>
+				<li class="active">Surat</li>
 			</ul><!-- /.breadcrumb -->
 			<div class="nav-search" id="nav-search">
 			</div><!-- /.nav-search -->
@@ -17,8 +17,7 @@
 				<div class="col-xs-12">
 					<div class="clearfix">
 						<h4 class="pink">
-							<i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
-							Penerimaan Peserta Didik Baru
+							Pengajuan Surat
 							<div class="pull-right tableTools-container"></div>
 						</h4>
 					</div>
@@ -32,14 +31,12 @@
 					<table id="dataTable" class="table table-striped table-bordered">
 						<thead>
 							<tr>    
-								<th class="center" width="5%">No</th>
-								<th class="center" width="15%">Nama Siswa</th>
-								<th class="center" width="5%">jk</th>
-								<th class="center" width="20%">Sekolah Asal</th>
-								<th class="center" width="20%">Jurusan</th>
-								<th class="center" width="10%">Rata-Rata UAS</th>
-								<th class="center" width="10%">Rata-Rata UN</th>
-
+								<th class="center" width="5%">#</th>
+								<th class="center" width="13%">No Surat</th>
+								<th class="center" width="10%">NIK</th>
+								<th class="center" width="20%">Nama</th>
+								<th class="center" width="15%">Jenis Kelamin</th>
+								<th class="center" width="20%">Jenis Surat</th>
 								<th class="center" >Action</th>
 							</tr>
 						</thead>	
@@ -47,30 +44,26 @@
 								$no=1;
 								foreach ($data as $row) { ?>
 							<tr>
-								<td align="center"><?php echo $no; ?></td>
-								<td><?= $row->namsiswa_ppdb; ?></td>
-								<td class="center"><?= $row->jk_ppdb; ?></td>
-								<td><?= $row->sekolah_ppdb; ?></td>
-								<td><?= $row->nama_jurusan; ?></td>
-								<td class="center">
-									<?= ($row->nsindo_ppdb+$row->nsing_ppdb+$row->nsmtk_ppdb+$row->nsipa_ppdb)/4; ?>
-								</td>
-								<td class="center">
-									<?= ($row->nsindo_ppdb+$row->nuing_ppdb+$row->numtk_ppdb+$row->nuipa_ppdb)/4; ?>
-								</td>
-								<td align="center">
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Print" 
-										onclick="ubahData(<?= $row->id_ppdb; ?>)">
+								<td><?php echo $no; ?></td>
+								<td class="center"><?= $row->srt_noSurat; ?></td>
+								<td class="center"><?= $row->srt_nik; ?></td>
+								<td><?= $row->srt_nama; ?></td>
+								<td class="center"><?= $row->srt_jk == "L" ? "Laki-Laki" : "Perempuan" ?></td>
+								<td><?= $row->srt_keperluan; ?></td>
+								
+								<td>
+									<a href="<?php echo base_url(); ?>MSurat/print/<?= $row->srt_id; ?>" class="tooltip-success" data-rel="tooltip" title="Print" >
 										<span class="green">
 											<i class="ace-icon fa fa-print bigger-120"></i>
 										</span>
 									</a>
-									<a href="<?php echo site_url(); ?>/mPPDB/hapus/<?= $row->id_ppdb; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+									<a href="<?php echo base_url(); ?>MSurat/hapus/<?= $row->srt_id; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
 										<span class="red">
 											<i class="ace-icon fa fa-trash-o bigger-120"></i>
 										</span>
 									</a>
 								</td>
+
 							</tr>
 							<?php 
 								$no++;
