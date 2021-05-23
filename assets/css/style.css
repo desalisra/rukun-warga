@@ -71,10 +71,10 @@
 .about{
 	background : linear-gradient(180deg,#ffffff 0%,#0c71c3 100%)!important;
 }
-
+/* 
 .about .container{
 	background: #fff;
-}
+} */
 
 .about h1{
 	color: #808080
