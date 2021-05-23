@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Telkom - Admin</title>
+	<title>Management RT - Admin</title>
 		
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/4.5.0/css/font-awesome.min.css');?>">
@@ -56,7 +56,7 @@
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 								<li>
-									<a href="<?php echo base_url('admin/mProfil')?>">
+									<a href="<?php echo base_url('MProfil')?>">
 										<i class="ace-icon fa fa-user"></i>
 										Management Admin
 									</a>

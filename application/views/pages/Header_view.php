@@ -11,14 +11,14 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
 
-  <title>Telkom School</title>
+  <title>Management RT</title>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top my-bg">
   <div class="container">
-    <a class="navbar-brand" href="<?= base_url('pages')?>"><img width="100" class="img-fluid" src="<?= base_url('assets/img/smktelkomjakarta-logo-redi.png')?>" alt=""></a>
+    <a class="navbar-brand" href="<?= base_url('pages')?>"><img width="60" class="img-fluid" src="<?= base_url('assets/img/logo.png')?>" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

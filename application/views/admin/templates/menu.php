@@ -51,7 +51,7 @@
 			<li class="">
 				<a href="#" class="dropdown-toggle">
 					<i class="menu-icon fa fa-building"></i>
-					<span class="menu-text"> Sekolah </span>
+					<span class="menu-text"> Profil </span>
 					<b class="arrow fa fa-angle-down"></b>
 				</a>
 				<b class="arrow"></b>
