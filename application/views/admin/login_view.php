@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Telkom Login</title>
+	<title>Admin Login</title>
 		
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/4.5.0/css/font-awesome.min.css');?>">
@@ -22,7 +22,7 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-graduation-cap white"></i>
-									<span class="white">Telkom School</span>
+									<span class="white">RT 02 RW 04 Larangan Utara</span>
 								</h1>
 								<h4 class="white lighter" id="id-company-text">Administrator</h4>
 							</div>
