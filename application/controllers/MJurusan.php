@@ -17,7 +17,8 @@ class mJurusan extends CI_Controller {
 	  $data['data'] = $this->mJurusan_model->getData();
 	  $this->load->view('admin/templates/header');
 	  $this->load->view('admin/templates/menu');
-	  $this->load->view('admin/pages/mJurusan_view', $data);
+	  // $this->load->view('admin/pages/mJurusan_view', $data);
+		$this->load->view('admin/pages/mKKHeader_view', $data);
 	  $this->load->view('admin/templates/footer');
 	}
 	

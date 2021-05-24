@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2021 at 12:08 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.3.27
+-- Waktu pembuatan: 24 Bulan Mei 2021 pada 02.48
+-- Versi server: 10.3.15-MariaDB
+-- Versi PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
+-- Struktur dari tabel `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -36,7 +37,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_admin`
+-- Dumping data untuk tabel `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email_admin`, `pass_admin`, `img_admin`) VALUES
@@ -46,7 +47,7 @@ INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email_admin`, `pass_admin`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_berita`
+-- Struktur dari tabel `tb_berita`
 --
 
 CREATE TABLE `tb_berita` (
@@ -58,7 +59,7 @@ CREATE TABLE `tb_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_berita`
+-- Dumping data untuk tabel `tb_berita`
 --
 
 INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita`, `tgl_berita`) VALUES
@@ -71,7 +72,7 @@ INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_detail_jurusan`
+-- Struktur dari tabel `tb_detail_jurusan`
 --
 
 CREATE TABLE `tb_detail_jurusan` (
@@ -82,7 +83,7 @@ CREATE TABLE `tb_detail_jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_detail_jurusan`
+-- Dumping data untuk tabel `tb_detail_jurusan`
 --
 
 INSERT INTO `tb_detail_jurusan` (`id_detailJurusan`, `jurusan_id`, `deskripsi_jurusan`, `kompetensi_jurusan`) VALUES
@@ -95,7 +96,7 @@ INSERT INTO `tb_detail_jurusan` (`id_detailJurusan`, `jurusan_id`, `deskripsi_ju
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jalur_ppdb`
+-- Struktur dari tabel `tb_jalur_ppdb`
 --
 
 CREATE TABLE `tb_jalur_ppdb` (
@@ -105,7 +106,7 @@ CREATE TABLE `tb_jalur_ppdb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_jalur_ppdb`
+-- Dumping data untuk tabel `tb_jalur_ppdb`
 --
 
 INSERT INTO `tb_jalur_ppdb` (`id_jalurPpdb`, `nama_jalurPpdb`, `des_jalurPpdb`) VALUES
@@ -116,7 +117,7 @@ INSERT INTO `tb_jalur_ppdb` (`id_jalurPpdb`, `nama_jalurPpdb`, `des_jalurPpdb`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jurusan`
+-- Struktur dari tabel `tb_jurusan`
 --
 
 CREATE TABLE `tb_jurusan` (
@@ -125,7 +126,7 @@ CREATE TABLE `tb_jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_jurusan`
+-- Dumping data untuk tabel `tb_jurusan`
 --
 
 INSERT INTO `tb_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
@@ -138,7 +139,7 @@ INSERT INTO `tb_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_ppdb`
+-- Struktur dari tabel `tb_ppdb`
 --
 
 CREATE TABLE `tb_ppdb` (
@@ -167,7 +168,7 @@ CREATE TABLE `tb_ppdb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_ppdb`
+-- Dumping data untuk tabel `tb_ppdb`
 --
 
 INSERT INTO `tb_ppdb` (`id_ppdb`, `jurusan_id`, `namsiswa_ppdb`, `tmplahir_ppdb`, `tgllahir_ppdb`, `jk_ppdb`, `agaman_ppdb`, `namwali_ppdb`, `almtwali_ppdb`, `tlp_ppdb`, `sekolah_ppdb`, `almtskolah_ppdb`, `nsindo_ppdb`, `nuindo_ppdb`, `nsing_ppdb`, `nuing_ppdb`, `nsmtk_ppdb`, `numtk_ppdb`, `nsipa_ppdb`, `nuipa_ppdb`, `flag_ppdb`, `tgl_ppdb`) VALUES
@@ -179,7 +180,7 @@ INSERT INTO `tb_ppdb` (`id_ppdb`, `jurusan_id`, `namsiswa_ppdb`, `tmplahir_ppdb`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_surat`
+-- Struktur dari tabel `tb_surat`
 --
 
 CREATE TABLE `tb_surat` (
@@ -198,7 +199,7 @@ CREATE TABLE `tb_surat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_surat`
+-- Dumping data untuk tabel `tb_surat`
 --
 
 INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmpLahir`, `srt_tglLahir`, `srt_jk`, `srt_agama`, `srt_alamat`, `srt_keperluan`, `srt_tglPengajuan`, `srt_stsPrint`) VALUES
@@ -207,7 +208,7 @@ INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmp
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_visimisi`
+-- Struktur dari tabel `tb_visimisi`
 --
 
 CREATE TABLE `tb_visimisi` (
@@ -217,7 +218,7 @@ CREATE TABLE `tb_visimisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_visimisi`
+-- Dumping data untuk tabel `tb_visimisi`
 --
 
 INSERT INTO `tb_visimisi` (`id_visimisi`, `visi_visimisi`, `misi_visimisi`) VALUES
@@ -228,102 +229,102 @@ INSERT INTO `tb_visimisi` (`id_visimisi`, `visi_visimisi`, `misi_visimisi`) VALU
 --
 
 --
--- Indexes for table `tb_admin`
+-- Indeks untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `tb_berita`
+-- Indeks untuk tabel `tb_berita`
 --
 ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indexes for table `tb_detail_jurusan`
+-- Indeks untuk tabel `tb_detail_jurusan`
 --
 ALTER TABLE `tb_detail_jurusan`
   ADD PRIMARY KEY (`id_detailJurusan`),
   ADD UNIQUE KEY `jurusan_id` (`jurusan_id`);
 
 --
--- Indexes for table `tb_jalur_ppdb`
+-- Indeks untuk tabel `tb_jalur_ppdb`
 --
 ALTER TABLE `tb_jalur_ppdb`
   ADD PRIMARY KEY (`id_jalurPpdb`);
 
 --
--- Indexes for table `tb_jurusan`
+-- Indeks untuk tabel `tb_jurusan`
 --
 ALTER TABLE `tb_jurusan`
   ADD PRIMARY KEY (`id_jurusan`);
 
 --
--- Indexes for table `tb_ppdb`
+-- Indeks untuk tabel `tb_ppdb`
 --
 ALTER TABLE `tb_ppdb`
   ADD PRIMARY KEY (`id_ppdb`);
 
 --
--- Indexes for table `tb_surat`
+-- Indeks untuk tabel `tb_surat`
 --
 ALTER TABLE `tb_surat`
   ADD PRIMARY KEY (`srt_id`);
 
 --
--- Indexes for table `tb_visimisi`
+-- Indeks untuk tabel `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
   ADD PRIMARY KEY (`id_visimisi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_admin`
+-- AUTO_INCREMENT untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_berita`
+-- AUTO_INCREMENT untuk tabel `tb_berita`
 --
 ALTER TABLE `tb_berita`
   MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tb_detail_jurusan`
+-- AUTO_INCREMENT untuk tabel `tb_detail_jurusan`
 --
 ALTER TABLE `tb_detail_jurusan`
   MODIFY `id_detailJurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_jalur_ppdb`
+-- AUTO_INCREMENT untuk tabel `tb_jalur_ppdb`
 --
 ALTER TABLE `tb_jalur_ppdb`
   MODIFY `id_jalurPpdb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tb_jurusan`
+-- AUTO_INCREMENT untuk tabel `tb_jurusan`
 --
 ALTER TABLE `tb_jurusan`
   MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_ppdb`
+-- AUTO_INCREMENT untuk tabel `tb_ppdb`
 --
 ALTER TABLE `tb_ppdb`
   MODIFY `id_ppdb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_surat`
+-- AUTO_INCREMENT untuk tabel `tb_surat`
 --
 ALTER TABLE `tb_surat`
   MODIFY `srt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_visimisi`
+-- AUTO_INCREMENT untuk tabel `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
   MODIFY `id_visimisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
