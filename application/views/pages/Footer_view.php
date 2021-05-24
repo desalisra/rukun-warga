@@ -1,17 +1,16 @@
 <!-- Footer -->
-<section class="jarak" id="footer-menu">
+<section id="footer-menu">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-fluid" src="<?= base_url('assets/img/smktelkomjakarta-logo-redi.png')?>" alt="">
-        <p>SMK TELKOM JAKARTA</p>
-        <p>Sekolah Berintegritas yang bernaung di bawah Yayasan Pendidikan Telkom. <br>
-        Jl. Daan mogot KM.11 Cengkareng Jakarta Barat <br>
-        021-5442500/021-5442600/021-54394605 atau WA 08111442600 <br>
-        Email : smkteljkt@ypt.or.id atau smkteljkt@gmail.com <br>twitter : smktelkomjakarta</p>
+        <p>RT 02 RW 04 Larangan Utara</p>
+        <p>Bekerjasama dan Gotong Royong <br>
+        Jl. Ciledug Raya No.6, RT.2/RW.004, Larangan Utara, Kec. Larangan, Kota Tangerang, Banten 15154 <br>
+        WA +6281381078807 <br>
+        </p>
       </div>
       <div class="col-lg-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63469.16527025466!2d106.750758!3d-6.154478000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa3a809c8c4627262!2sSMK+Telkom+Jakarta!5e0!3m2!1sen!2sus!4v1554266909212!5m2!1sen!2sus" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2363924349993!2d106.72676131382475!3d-6.232536995488434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f0a67a06104b%3A0x3c29c4f96a88e890!2sJl.%20Ciledug%20Raya%20Blok%20Teman%20No.6%2C%20RT.2%2FRW.004%2C%20Larangan%20Utara%2C%20Kec.%20Larangan%2C%20Kota%20Tangerang%2C%20Banten%2015154!5e0!3m2!1sen!2sid!4v1621754257275!5m2!1sen!2sid" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -19,7 +18,7 @@
 <section id="footer">
   <div class="container">
     <div class="row">
-      <p>SMK Telkom Jakarta 2019</p>
+      <p>Karang Taruna RT 02 RW 04 &copy; 2021</p>
     </div>
   </div>
 </section>

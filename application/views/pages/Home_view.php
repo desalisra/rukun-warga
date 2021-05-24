@@ -2,8 +2,8 @@
 <section id="welcome">
   <div class="container">
     <div class="jumbotron">
-      <h1 class="display-4 text-center">SMK TELKOM JAKARTA</h1>
-      <p class="lead text-center">Sekolah Menengah Kejuruan di Jakarta Barat yang memiliki predikat SEKOLAH BERINTEGRITAS dari Kementerian Pendidikan Republik Indonesia dan memiliki kejuruan bidang Teknologi Telekomunikasi</p>
+      <h1 class="display-4 text-center">RT 02 RW 04 LARANGAN UTARA</h1>
+      <p class="lead text-center">Website ini dikelola oleh teman-teman KARANG TARUNA RT 02 RW 04 Kelurahan Larangan Utara, Kecamatan Larangan, Tangerang, Banten, 15154</p>
     </div>
   </div>
 </section>
@@ -20,13 +20,16 @@
           <div class="card-body">
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Jalur PMDK</a>
+                <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">Pembuatan KTP</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Jalur Prestasi</a>
+                <a class="nav-link" href="#buzz" role="tab" data-toggle="tab">Pembuatan SKCK</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#references" role="tab" data-toggle="tab">Jalur Mandiri</a>
+                <a class="nav-link" href="#references" role="tab" data-toggle="tab">Pembuatan KK</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#profilesn" role="tab" data-toggle="tab">Pembuatan Surat Nikah</a>
               </li>
             </ul>
 
@@ -34,25 +37,103 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="profile">
                 <p>Syarat : <br>
-                - Lingkungan TELKOM Group <br>
-                - Ada MoU / Kemitraan dengan SMP / SLTP yg sederajat, MoU menyatakan bahwa siswa tersebut minimal pernah sekali peringkat 10 besar (semester 1-4) dikelas yang dibuktikan dengan surat keterangan dari SMP asal.<br> - Keluarga MOU / Kemitraan Dunia Industri Dunia Pendidikan <br>- Perusahaan kemitraan SMK Telkom ( Pendidikan (kemitraan perguruan tinggi, sltp)<br>
-                - Keluarga AKSATA (Keluarga Alumni)</p>
+                - Telah berusia 17 tahun. <br>
+                - Surat Pengantar RT/RW. <br>
+                - Fotokopi KK. <br>
+                - Fotokopi Akta Kelahiran <br>
+                - Surat Keterangan Pindah yang diterbitkan oleh pemerintah Kabupaten/Kota dari daerah asal. <br>
+                - Surat Keterangan Datang dari Luar Negeri yang diterbitkan oleh Instansi Pelaksana bagi WNI yang datang dari Luar Negeri karena pindah.<br>
+                <br>
+                Prosedur pembuatan dan perpanjang e-KTP: <br>
+                - Datang langsung untuk di foto (E-KTP) atau melampirkan pas foto terbaru ukuran 3×4 sebanyak 2 lembar (KTP Lama) <br>
+                - Datanglah ke kecamatan / kelurahan pada pagi hari : untuk menghindari antrian saat membuat atau memperpanjang KTP kamu dapat datang lebih pagi ke kelurahan. Lalu berikan berkas dokumen ke petugas di loket dan kamu akan mendapatkan nomor antrian.<br>
+                - Pengambilan data : Setelah nomor antrian dipanggil maka inilah saatnya pengambilan data kamu, awal biasanya kamu akan difoto, pengambilan tanda tangan digital, perekam data sidik jari, scan retina mata.<br>
+                - Proses pelengkapan data akan berlangsung selama 15 menit dan proses pembuatan akan berlangsung paling lama 14 hari atau 2 minggu setelah kamu mengikuti semua persyaratan di atas.</p>
               </div>
+              
               <div role="tabpanel" class="tab-pane fade" id="buzz">
-                <p>Syarat :<br>Dibuktikan dengan prestasi siswa baik dibidang seni, sains, olahraga baik ditingkat kelas, sekolah, kelurahan, kecamatan, nasional yang dibuktikan dengan surat keterangan dari SMP asal atau pihak yang berwenang.</p>
+                <p>Syarat Untuk WARGA NEGARA INDONESIA :<br>
+                - WARGA NEGARA INDONESIA (WNI) <br>
+                - Fotokopi KTP dengan menunjukan KTP asli.<br>
+                - Fotokopi Paspor. (tidak wajib)<br>
+                - Fotokopi Kartu Keluarga (KK).<br>
+                - Fotokopi Akte Lahir / Kenal Lahir<br>
+                - Fotokopi kartu identitas lain bagi yang belum memenuhi syarat untuk mendapatkan KTP.<br>
+                - Pas foto berwarna ukuran 4 x 6 cm sebanyak 6 (enam) lembar dengan latar belakang merah, berpakaian sopan, tampak muka, dan bagi pemohon yang mengenakan jilbab, pasfoto harus tampak muka secara utuh.<br>
+                <br>
+                Syarat Untuk WARGA NEGARA ASING :<br>
+                - WARGA NEGARA ASING (WNA)<br>
+                - Surat permohonan dari sponsor, perusahaan, atau lembaga yang mempekerjakan, menggunakan, atau yang bertanggung jawab pada WNA.<br>
+                - Fotokopi KTP dan Surat Nikah apabila sponsor dari Suami/Istri Warga Negara Indonesia (WNI).<br>
+                - Fotokopi Paspor.<br>
+                - Fotokopi Kartu Izin Tinggal Terbatas (KITAS) atau Kartu Izin Tinggal Tetap (KITAP).<br>
+                - Fotokopi IMTA dari KEMENAKER RI<br>
+                - Fotokopi Surat Tanda Melapor (STM) dari Kepolisian.<br>
+                - Pas foto berwarna ukuran 4 x 6 cm sebanyak 6 (enam) lembar dengan latar belakang berwarna kuning, berpakaian sopan, tampak muka, dan bagi pemohon yang mengenakan jilbab, pasfoto harus tampak muka secara utuh.</p>
               </div>
               <div role="tabpanel" class="tab-pane fade" id="references">
-                <p>Jalur ini dengan tes akademis online + wawancara + psikotes</p>
+                <p>Penerbitan Kartu Keluarga bagi Pasangan Baru :<br>
+                - Meminta surat pengantar pembuatan kartu keluarga baru dari Ketua RT setempat.<br>
+                - Membawa surat pengantar tersebut ke Ketua RW dan meminta stempel RW.<br>
+                - Membawa surat pengantar tersebut beserta dengan persyaratan lainnya ke kantor kelurahan dan mengisi formulir permohonan kartu keluarga baru di sana.<br>
+                <br>
+                Mengurus KK jika Ada Penambahan Anggota Keluarga Baru (Kelahiran) :<br>
+                - Jika Terjadi Penambahan Anggota Keluarga (Kelahiran)<br>
+                - Surat pengantar dari RT/RW.<br>
+                - Kartu kaluarga yang lama.<br>
+                - Surat keterangan kelahiran putra/putri Anda yang akan menjadi anggota keluarga baru di dalam kartu keluarga.<br>
+                <br>
+                Mengurus KK jika Ada Anggota Keluarga yang Menumpang :<br>
+                - Surat pengantar dari RT/RW.<br>
+                - Kartu keluarga yang lama.<br>
+                - Surat keterangan pindah datang.<br>
+                - Surat keterangan datang dari luar negeri (bagi WNI yang datang dari luar negeri).<br>
+                - Paspor, izin tinggal tetap, dan surat keterangan catatan kepolisian/surat tanda lapor diri (bagi WNA).<br>
+                <br>
+                Mengurus KK jika Ada Pengurangan Anggota Keluarga : <br>
+                - Surat pengantar dari RT/RW.<br>
+                - Kartu keluarga yang lama.<br>
+                - Surat Keterangan Kematian (bagi yang meninggal dunia).<br>
+                - Surat Keterangan Pindah (bagi yang pindah)<br>
+                <br>
+                Penggantian KK jika Rusak atau Hilang : <br>
+                - Surat pengantar dari RT/RW.<br>
+                - Surat Keterangan Kehilangan dari Kepolisian.<br>
+                - Kartu Keluarga yang rusak (kasus KK yang rusak).<br>
+                - Fotokopi dokumen kependudukan dari salah satu anggota keluarga.<br>
+                - Dokumen keimigrasian bagi orang asing.</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profilesn">
+                <p>Syarat : <br>
+                - Membawa surat Pengantar RT/RW <br>
+                - Pernyataan Belum Pernah / Pernah Menikah (dari Kelurahan) <br>
+                - Fotokopi KK <br>
+                - Fotocopy KTP <br>
+                - Fotocopy Akta Kelahiran <br>
+                - Fotocopy Ijazah Terakhir <br>
+                - Fotocopy Surat Nikah Orang Tua / Akte Cerai <br>
+                - Fotocopy KK / KTP Pasangan <br>
+                - Pas Foto 3x4 (2 Lembar) <br>
+                - Pas Foto 3x4 Pasangan (2 Lembar) <br>
+                - Bagi Calon Pengantin Perempuan Dengan Membawa Persyaratan Nikah Dari Pihak Laki-Laki (Boro Nikah)<br>
+                - Bagi Calon Pengantin Status Janda/Duda Membawa Fotocopy Surat Cerai Mati / Cerai Hidup dan Membawa Yang Asli <br>
+                <br>
+                Sistem, Mekanisme dan Prosedur: <br>
+                - Datanglah dengan membawa persyaratan pendukung <br>
+                - Pengecekan Syarat pembuatan surat oleh Petugas Kelurahan <br>
+                - Pembuatan Blanko atau surat dari Kelurahan <br>
+                - Pengesahan Blanko dan Surat permohonan oleh Perangkat Kelurahan <br>
+                - Blanko dan Surat permohonan siap dibawa ke kecamatan / dinas terkait </p>
               </div>
             </div>
           </div>
         </div>
         
-        <p>PENERIMAAN PESERTA DIDIK BARU TAHUN AJARAN 2019-2020 TELAH DIBUKA,</p>
-        <h6>kami membuka 3 Jalur pendaftaran yaitu :</h6>
-        <p>1). MINAT DAN KEMITRAAN  (PMDK) / Proses seleksi hanya : psikotes dan wawancara</p>
-        <p>2). PRESTASI / Proses seleksi hanya : psikotes dan wawancara</p>
-        <p>3). MANDIRI / Proses seleksi meliputi : Test akademik , psikotes dan wawancara.</p>
+        <p>JIKA ANDA MERUPAKAN WARGA BARU</p>
+        <h6>Mohon untuk melakukan laporan kepada ketua RT atau sekertariat RT agar data anda dapat di daftarkan kedalam system dengan membawa syarat sbb :</h6>
+        <p>1). KTP Asli</p>
+        <p>2). Kartu Keluarga Asli</p>
+        <h8>Penduduk yang pindah domisili tetap perlu melapor kepada RT/RW setempat untuk berpamitan, dan melapor saat datang di tempat tujuan sekaligus mengenalkan diri ke ketua RT/RW sebagai warga baru di lingkungannya. Ini adalah bagian dari tanggung jawab moral serta menghargai adat istiadat setempat </h8>
       </div>
       <!-- End Left Content -->
       <div class="col-lg-6">
@@ -84,9 +165,9 @@
         
         <div class="card daftar">
           <div class="card-body">
-            <h3 class="text-center font-weight-light">DAFTAR SEKARANG</h3>
-            <p class="text-center">Setelah selesai mendaftar, mohon segera menghubungi petugas kami untuk melakukan pembayaran biaya Ujian Saringan Masuk PPDB dengan menyertakan bukti yang telah kami kirimkan via email Bapak/Ibu berbentuk notifikasi selambat-lambatnya satu minggu setelah melakukan mendaftaran,</p>
-            <a href="<?= base_url('pages/ppdb')?>" class="btn ">CLICK HERE</a>
+            <h3 class="text-center font-weight-light">AJUKAN DISINI</h3>
+            <p class="text-center">Dari pada menunggu lama, agar lebih mudah untuk membuat surat penghantar KTP, penghantar KK, penghantar SKCK, Surat Ketarangan Pindah, dll. kalian bisa klik dibagian bawah ini ya untuk pembuatan surat otomatis </p>
+            <a href="<?= base_url('pages/pengajuanSurat')?>" class="btn ">CLICK HERE</a>
           </div>
         </div>
       </div>
@@ -97,8 +178,8 @@
 <!-- End Content -->
 
 <!-- About -->
-<section class="about jarak">
-  <h1 class="text-center">Jurusan di SMK Telkom Jakarta</h1>
+<!-- <section class="about jarak">
+  
   <div class="container">
     <div class="row">
 
@@ -154,9 +235,10 @@
   </div>
 
   
-</section>
+</section> -->
 
-<section>
+<section class="about jarak pb-5">
+  <h1 class="text-center pb-3">Jajaran Sekretariat RT 02 RW 04</h1>
   <div class="container">
     <div class="row">
 
@@ -187,11 +269,7 @@
           </div>
         </div>
       </div>
-
     </div>
-    <h3 class="text-center jarak">LET’S GET STARTED</h3>
-    <h2 class="text-center">Ayo Gabung di SMK Telkom Jakarta</h2>
-    <a href="<?= base_url('pages/ppdb')?>" class="btn btn-primary btn-daftar btn-lg jarak">DAFTAR</a>
   </div>
 </section>
 <!-- End About -->

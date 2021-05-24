@@ -31,7 +31,7 @@
 	margin-top:70px; 
 	min-height: 350px;
 	background: rgba(0,0,0,0.5);
-	background-image: url(../img/back-telkom-schools.png); 
+	background-image: url(../img/IMG_20150808_184855.jpg); 
 	background-size: cover;
 }
 
@@ -71,10 +71,10 @@
 .about{
 	background : linear-gradient(180deg,#ffffff 0%,#0c71c3 100%)!important;
 }
-
+/* 
 .about .container{
 	background: #fff;
-}
+} */
 
 .about h1{
 	color: #808080
