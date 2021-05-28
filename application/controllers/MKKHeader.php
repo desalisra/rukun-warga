@@ -1,6 +1,6 @@
 <?php if(! defined('BASEPATH'))exit('No direct script access allowed');
 
-class mJurusan extends CI_Controller {
+class MKKHeader extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
@@ -9,15 +9,14 @@ class mJurusan extends CI_Controller {
         	redirect('admin/login');
         }
 
-        $this->load->model('admin/mJurusan_model');
+        $this->load->model('admin/MKkHeader_model');
 	}
 
 	public function index()
 	{
-	  $data['data'] = $this->mJurusan_model->getData();
+	  $data['data'] = $this->MKkHeader_model->getData();
 	  $this->load->view('admin/templates/header');
 	  $this->load->view('admin/templates/menu');
-	  // $this->load->view('admin/pages/mJurusan_view', $data);
 		$this->load->view('admin/pages/mKKHeader_view', $data);
 	  $this->load->view('admin/templates/footer');
 	}
@@ -27,8 +26,8 @@ class mJurusan extends CI_Controller {
 			show_404();
 		}
 		
-		$this->mJurusan_model->add();
-			redirect('mJurusan');	
+		$this->MKkHeader_model->add();
+		redirect('MKKHeader');	
 	}
 
 	public function hapus()
@@ -36,14 +35,14 @@ class mJurusan extends CI_Controller {
 	  if (!isset($_POST))
         show_404();
 		
-		$this->mJurusan_model->hapus();
-			redirect('mJurusan');	
+		$this->MKkHeader_model->hapus();
+			redirect('MKKHeader');	
 	}
 	
 
 	public function edit()
 	{
-		$data = $this->mJurusan_model->edit();
+		$data = $this->MKkHeader_model->edit();
 		echo json_encode($data);
 		
 	}

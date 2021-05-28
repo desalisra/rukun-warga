@@ -37,16 +37,16 @@
 				<b class="arrow"></b>
 				<ul class="submenu">
 					<li class="">
-						<a href="<?= base_url('mJurusan')?>">
+						<a href="<?= base_url('MKKHeader')?>">
 							<i class="menu-icon fa fa-caret-right"></i>
-							Jurusan
+							Master KK
 						</a>
 						<b class="arrow"></b>
 					</li>
 					<li class="">
 						<a href="<?= base_url('mDetailJurusan')?>">
 							<i class="menu-icon fa fa-caret-right"></i>
-							Kopetensi Jurusan
+							KK Detail
 						</a>
 						<b class="arrow"></b>
 					</li>
