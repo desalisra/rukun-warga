@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Bulan Mei 2021 pada 02.48
--- Versi server: 10.3.15-MariaDB
--- Versi PHP: 7.3.6
+-- Generation Time: May 31, 2021 at 12:30 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_admin`
+-- Table structure for table `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -37,7 +36,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_admin`
+-- Dumping data for table `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email_admin`, `pass_admin`, `img_admin`) VALUES
@@ -47,7 +46,7 @@ INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email_admin`, `pass_admin`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_berita`
+-- Table structure for table `tb_berita`
 --
 
 CREATE TABLE `tb_berita` (
@@ -59,7 +58,7 @@ CREATE TABLE `tb_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_berita`
+-- Dumping data for table `tb_berita`
 --
 
 INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita`, `tgl_berita`) VALUES
@@ -72,7 +71,7 @@ INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_detail_jurusan`
+-- Table structure for table `tb_detail_jurusan`
 --
 
 CREATE TABLE `tb_detail_jurusan` (
@@ -83,7 +82,7 @@ CREATE TABLE `tb_detail_jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_detail_jurusan`
+-- Dumping data for table `tb_detail_jurusan`
 --
 
 INSERT INTO `tb_detail_jurusan` (`id_detailJurusan`, `jurusan_id`, `deskripsi_jurusan`, `kompetensi_jurusan`) VALUES
@@ -96,7 +95,7 @@ INSERT INTO `tb_detail_jurusan` (`id_detailJurusan`, `jurusan_id`, `deskripsi_ju
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_jalur_ppdb`
+-- Table structure for table `tb_jalur_ppdb`
 --
 
 CREATE TABLE `tb_jalur_ppdb` (
@@ -106,7 +105,7 @@ CREATE TABLE `tb_jalur_ppdb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_jalur_ppdb`
+-- Dumping data for table `tb_jalur_ppdb`
 --
 
 INSERT INTO `tb_jalur_ppdb` (`id_jalurPpdb`, `nama_jalurPpdb`, `des_jalurPpdb`) VALUES
@@ -117,7 +116,7 @@ INSERT INTO `tb_jalur_ppdb` (`id_jalurPpdb`, `nama_jalurPpdb`, `des_jalurPpdb`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_jurusan`
+-- Table structure for table `tb_jurusan`
 --
 
 CREATE TABLE `tb_jurusan` (
@@ -126,7 +125,7 @@ CREATE TABLE `tb_jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_jurusan`
+-- Dumping data for table `tb_jurusan`
 --
 
 INSERT INTO `tb_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
@@ -134,12 +133,55 @@ INSERT INTO `tb_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
 (2, 'Teknik Jaringan Akses'),
 (3, 'Teknik Komputer Jaringan'),
 (4, 'Rekayasa Prangkat Lunak'),
-(5, 'Multimedia');
+(5, 'Multimedia'),
+(6, 'Desta'),
+(7, 'Camat');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_ppdb`
+-- Table structure for table `tb_kk_detail`
+--
+
+CREATE TABLE `tb_kk_detail` (
+  `id_dkk` int(11) NOT NULL,
+  `hid_dkk` int(11) NOT NULL,
+  `nik_dkk` varchar(20) NOT NULL,
+  `nama_dkk` varchar(50) NOT NULL,
+  `jk_dkk` varchar(1) NOT NULL,
+  `tmpLahir_dkk` varchar(20) NOT NULL,
+  `tglLahir_dkk` date NOT NULL,
+  `agama_dkk` varchar(10) NOT NULL,
+  `pendidikan_dkk` varchar(20) NOT NULL,
+  `pekerjaan_dkk` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_kk_header`
+--
+
+CREATE TABLE `tb_kk_header` (
+  `id_kk` int(11) NOT NULL,
+  `no_kk` varchar(20) NOT NULL,
+  `kepala_kk` varchar(50) NOT NULL,
+  `telp_kk` varchar(15) NOT NULL,
+  `alamat_kk` text NOT NULL,
+  `domisili_kk` varchar(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_kk_header`
+--
+
+INSERT INTO `tb_kk_header` (`id_kk`, `no_kk`, `kepala_kk`, `telp_kk`, `alamat_kk`, `domisili_kk`) VALUES
+(2, '987654321', 'Camat', '089664569298', 'jl jalan', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_ppdb`
 --
 
 CREATE TABLE `tb_ppdb` (
@@ -168,7 +210,7 @@ CREATE TABLE `tb_ppdb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_ppdb`
+-- Dumping data for table `tb_ppdb`
 --
 
 INSERT INTO `tb_ppdb` (`id_ppdb`, `jurusan_id`, `namsiswa_ppdb`, `tmplahir_ppdb`, `tgllahir_ppdb`, `jk_ppdb`, `agaman_ppdb`, `namwali_ppdb`, `almtwali_ppdb`, `tlp_ppdb`, `sekolah_ppdb`, `almtskolah_ppdb`, `nsindo_ppdb`, `nuindo_ppdb`, `nsing_ppdb`, `nuing_ppdb`, `nsmtk_ppdb`, `numtk_ppdb`, `nsipa_ppdb`, `nuipa_ppdb`, `flag_ppdb`, `tgl_ppdb`) VALUES
@@ -180,7 +222,7 @@ INSERT INTO `tb_ppdb` (`id_ppdb`, `jurusan_id`, `namsiswa_ppdb`, `tmplahir_ppdb`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_surat`
+-- Table structure for table `tb_surat`
 --
 
 CREATE TABLE `tb_surat` (
@@ -199,7 +241,7 @@ CREATE TABLE `tb_surat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_surat`
+-- Dumping data for table `tb_surat`
 --
 
 INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmpLahir`, `srt_tglLahir`, `srt_jk`, `srt_agama`, `srt_alamat`, `srt_keperluan`, `srt_tglPengajuan`, `srt_stsPrint`) VALUES
@@ -208,7 +250,7 @@ INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmp
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_visimisi`
+-- Table structure for table `tb_visimisi`
 --
 
 CREATE TABLE `tb_visimisi` (
@@ -218,7 +260,7 @@ CREATE TABLE `tb_visimisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_visimisi`
+-- Dumping data for table `tb_visimisi`
 --
 
 INSERT INTO `tb_visimisi` (`id_visimisi`, `visi_visimisi`, `misi_visimisi`) VALUES
@@ -229,102 +271,126 @@ INSERT INTO `tb_visimisi` (`id_visimisi`, `visi_visimisi`, `misi_visimisi`) VALU
 --
 
 --
--- Indeks untuk tabel `tb_admin`
+-- Indexes for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `tb_berita`
+-- Indexes for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indeks untuk tabel `tb_detail_jurusan`
+-- Indexes for table `tb_detail_jurusan`
 --
 ALTER TABLE `tb_detail_jurusan`
   ADD PRIMARY KEY (`id_detailJurusan`),
   ADD UNIQUE KEY `jurusan_id` (`jurusan_id`);
 
 --
--- Indeks untuk tabel `tb_jalur_ppdb`
+-- Indexes for table `tb_jalur_ppdb`
 --
 ALTER TABLE `tb_jalur_ppdb`
   ADD PRIMARY KEY (`id_jalurPpdb`);
 
 --
--- Indeks untuk tabel `tb_jurusan`
+-- Indexes for table `tb_jurusan`
 --
 ALTER TABLE `tb_jurusan`
   ADD PRIMARY KEY (`id_jurusan`);
 
 --
--- Indeks untuk tabel `tb_ppdb`
+-- Indexes for table `tb_kk_detail`
+--
+ALTER TABLE `tb_kk_detail`
+  ADD PRIMARY KEY (`id_dkk`);
+
+--
+-- Indexes for table `tb_kk_header`
+--
+ALTER TABLE `tb_kk_header`
+  ADD PRIMARY KEY (`id_kk`);
+
+--
+-- Indexes for table `tb_ppdb`
 --
 ALTER TABLE `tb_ppdb`
   ADD PRIMARY KEY (`id_ppdb`);
 
 --
--- Indeks untuk tabel `tb_surat`
+-- Indexes for table `tb_surat`
 --
 ALTER TABLE `tb_surat`
   ADD PRIMARY KEY (`srt_id`);
 
 --
--- Indeks untuk tabel `tb_visimisi`
+-- Indexes for table `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
   ADD PRIMARY KEY (`id_visimisi`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_admin`
+-- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_berita`
+-- AUTO_INCREMENT for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
   MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_detail_jurusan`
+-- AUTO_INCREMENT for table `tb_detail_jurusan`
 --
 ALTER TABLE `tb_detail_jurusan`
   MODIFY `id_detailJurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_jalur_ppdb`
+-- AUTO_INCREMENT for table `tb_jalur_ppdb`
 --
 ALTER TABLE `tb_jalur_ppdb`
   MODIFY `id_jalurPpdb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_jurusan`
+-- AUTO_INCREMENT for table `tb_jurusan`
 --
 ALTER TABLE `tb_jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_ppdb`
+-- AUTO_INCREMENT for table `tb_kk_detail`
+--
+ALTER TABLE `tb_kk_detail`
+  MODIFY `id_dkk` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tb_kk_header`
+--
+ALTER TABLE `tb_kk_header`
+  MODIFY `id_kk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tb_ppdb`
 --
 ALTER TABLE `tb_ppdb`
   MODIFY `id_ppdb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_surat`
+-- AUTO_INCREMENT for table `tb_surat`
 --
 ALTER TABLE `tb_surat`
   MODIFY `srt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_visimisi`
+-- AUTO_INCREMENT for table `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
   MODIFY `id_visimisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

@@ -83,7 +83,7 @@
 								foreach ($data as $row) { ?>
 							<tr>
 								<td>
-									<a href="#" class="tooltip-primary" data-rel="tooltip" title="Detail">
+									<a href="<?= base_url(); ?>/MKKDetail/index/<?= $row->id_kk; ?>" class="tooltip-primary" data-rel="tooltip" title="Detail">
 										<i class="ace-icon fa fa-file-o bigger-140"></i>
 									</a>
 									 | 
@@ -92,7 +92,7 @@
 											<i class="ace-icon fa fa-pencil-square-o bigger-150"></i>
 									</a>
 									 | 
-									<a href="<?php echo site_url(); ?>/MKKHeader/hapus/<?= $row->id_kk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+									<a href="<?= base_url(); ?>/MKKHeader/hapus/<?= $row->id_kk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
 										<i class="ace-icon fa fa-trash-o bigger-150"></i>
 									</a>									
 								</td>
