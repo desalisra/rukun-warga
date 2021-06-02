@@ -28,8 +28,9 @@ class MKKDetail extends CI_Controller {
 			show_404();
 		}
 		
-		$this->MKkDetail_model->add();
-		redirect('MKKDetail');	
+		$id = $this->input->post('idHeader');
+    $this->MKkDetail_model->add();
+		redirect("MKKDetail/index/$id");	
 	}
 
 	public function hapus()

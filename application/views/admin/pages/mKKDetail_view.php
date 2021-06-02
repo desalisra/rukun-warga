@@ -5,7 +5,7 @@
 			function ubahData(id){
 				$("#m_modal").modal('show');
 				$.ajax({
-								url: '<?php echo base_url('MKKHeader/edit'); ?>',
+								url: '<?php echo base_url('MKKDetail/edit'); ?>',
 								method : "POST",
 								data : {id: id},
 								async : false,
@@ -13,14 +13,15 @@
 								success : function(data){				
 									var i;
 									for(i=0; i<data.length; i++){
-										$("#id").val(data[i].id_kk);
-										$("#nokk").val(data[i].no_kk);
-										$("#nama").val(data[i].kepala_kk);
-										$("#telepon").val(data[i].telp_kk);
-										$("#alamat").val(data[i].alamat_kk);
-										if(data[i].domisili_kk == "Y"){
-											$("#domisili").attr("checked", "checked");	
-										}
+										$("#id").val(data[i].id_dkk);
+										$("#nik").val(data[i].nik_dkk);
+										$("#nama").val(data[i].nama_dkk);
+										$("#jk").val(data[i].jk_dkk);
+										$("#tmpLahir").val(data[i].tmpLahir_dkk);
+                    $("#tglLahir").val(data[i].tglLahir_dkk);
+                    $("#agama").val(data[i].agama_dkk);
+                    $("#pendidikan").val(data[i].pendidikan_dkk);
+                    $("#pekerjaan").val(data[i].pekerjaan_dkk);
 									}
 								}
 	            });
@@ -123,11 +124,11 @@
                       </a>
                       | 
                       <a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" 
-                        onclick="ubahData(<?= $row->id_kk; ?>)">
+                        onclick="ubahData(<?= $row->id_dkk; ?>)">
                           <i class="ace-icon fa fa-pencil-square-o bigger-150"></i>
                       </a>
                       | 
-                      <a href="<?= base_url(); ?>/MKKHeader/hapus/<?= $row->id_kk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+                      <a href="<?= base_url(); ?>/MKKDetail/hapus/<?= $row->id_dkk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
                         <i class="ace-icon fa fa-trash-o bigger-150"></i>
                       </a>									
                     </td>
@@ -167,7 +168,7 @@
 					Add Data Kartu Keluarga
 				</div>
 			</div>
-			<form class="form-horizontal" role="form" name="f_modal" id="f_modal" action="<?php echo base_url('MKKDetail/add'); ?>" method="post" enctype="multipart/form-data">
+			<form class="form-horizontal" role="form" name="f_modal" id="f_modal" action="<?= base_url('MKKDetail/add'); ?>" method="post" enctype="multipart/form-data">
 				<div id="konfirmasi"></div>
           <table class="table table-form">
             <input type="hidden" class="form-control" name="id" id="id" value="">
@@ -195,8 +196,8 @@
               <td style="width: 75%">
                 <select class="form-control" name="jk" id="jk" required>
                   <option value="">-- Pilih Jenis Kelamin --</option>
-                  <option value="Islam">Laki-Laki</option>
-                  <option value="Kristen">Perempuan</option>
+                  <option value="L">Laki-Laki</option>
+                  <option value="P">Perempuan</option>
                 </select>
               </td>
             </tr>
@@ -218,10 +219,10 @@
             </tr>
             <tr>
               <td style="width: 25%">
-                <label for="Agama">Agama</label>
+                <label for="agama">Agama</label>
               </td>
               <td style="width: 75%">
-                <select class="form-control" name="Agama" id="Agama" required>
+                <select class="form-control" name="agama" id="agama" required>
                   <option value="">-- Pilih Agama --</option>
                   <option value="Islam">Islam</option>
                   <option value="Kristen">Kristen</option>

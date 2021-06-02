@@ -27,6 +27,7 @@ class MKkDetail_Model extends CI_Model {
     public function add()
     {
         $id = $this->input->post('id');
+        $idHeader = $this->input->post('idHeader');
         $nik = $this->input->post('nik');
         $nama = $this->input->post('nama');
         $jk = $this->input->post('jk');
@@ -36,26 +37,22 @@ class MKkDetail_Model extends CI_Model {
         $pendidikan = $this->input->post('pendidikan');
         $pekerjaan = $this->input->post('pekerjaan');
 
-        if (is_null($domisiliYN)){
-            echo "masuk sini";
-            $domisiliYN = 'N';
-        }else{
-            $domisiliYN = 'Y';
-        }
-
-
         if (!empty($id)){
-            $query = $this->db->query("UPDATE tb_kk_header 
-                SET no_kk = '$nokk',
-                    kepala_kk = '$nama',
-                    telp_kk = '$telp',
-                    alamat_kk = '$alamat',
-                    domisili_kk = '$domisiliYN'
-                WHERE id_kk = '$id'"); 
+            $query = $this->db->query("UPDATE tb_kk_detail 
+                SET hid_dkk = '$idHeader',
+                    nik_dkk = '$nik',
+                    nama_dkk = '$nama',
+                    jk_dkk = '$jk',
+                    tmpLahir_dkk = '$tmpLahir',
+                    tglLahir_dkk = '$tglLahir',
+                    agama_dkk = '$agama',
+                    pendidikan_dkk = '$pendidikan',
+                    pekerjaan_dkk = '$pekerjaan'
+                WHERE id_dkk = '$id'"); 
         } else {
-            $query = $this->db->query("INSERT INTO tb_kk_header
-                (no_kk,kepala_kk,telp_kk,alamat_kk,domisili_kk) 
-                VALUES ('$nokk','$nama','$telp','$alamat','$domisiliYN')");     
+            $query = $this->db->query("INSERT INTO tb_kk_detail
+              (hid_dkk,nik_dkk,nama_dkk,jk_dkk,tmpLahir_dkk,tglLahir_dkk,agama_dkk,pendidikan_dkk,pekerjaan_dkk) 
+              VALUES ('$idHeader','$nik','$nama','$jk','$tmpLahir','$tglLahir','$agama','$pendidikan','$pekerjaan')");     
         }
     }
 
@@ -63,13 +60,13 @@ class MKkDetail_Model extends CI_Model {
     public function hapus()
     {
         $id = $this->uri->segment('3');
-        $query = $this->db->query("DELETE FROM tb_kk_header WHERE id_kk = '$id'");
+        $query = $this->db->query("DELETE FROM tb_kk_detail WHERE id_dkk = '$id'");
     }
 
     public function edit()
     {
         $id=$this->input->post('id');
-        $query = $this->db->query("SELECT * FROM tb_kk_header WHERE id_kk = '$id'");
+        $query = $this->db->query("SELECT * FROM tb_kk_detail WHERE id_dkk = '$id'");
         return $query->result();
     }
 }
