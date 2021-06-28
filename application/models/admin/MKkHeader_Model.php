@@ -1,10 +1,11 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
- 
-class MKkHeader_Model extends CI_Model {
-     
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+class MKkHeader_Model extends CI_Model
+{
+
     public function __construct()
     {
-        parent::__construct();		
+        parent::__construct();
     }
 
 
@@ -23,26 +24,26 @@ class MKkHeader_Model extends CI_Model {
         $alamat = $this->input->post('alamat');
         $domisiliYN = $this->input->post('domisili');
 
-        if (is_null($domisiliYN)){
+        if (is_null($domisiliYN)) {
             echo "masuk sini";
             $domisiliYN = 'N';
-        }else{
+        } else {
             $domisiliYN = 'Y';
         }
 
 
-        if (!empty($id)){
+        if (!empty($id)) {
             $query = $this->db->query("UPDATE tb_kk_header 
                 SET no_kk = '$nokk',
                     kepala_kk = '$nama',
                     telp_kk = '$telp',
                     alamat_kk = '$alamat',
                     domisili_kk = '$domisiliYN'
-                WHERE id_kk = '$id'"); 
+                WHERE id_kk = '$id'");
         } else {
             $query = $this->db->query("INSERT INTO tb_kk_header
                 (no_kk,kepala_kk,telp_kk,alamat_kk,domisili_kk) 
-                VALUES ('$nokk','$nama','$telp','$alamat','$domisiliYN')");     
+                VALUES ('$nokk','$nama','$telp','$alamat','$domisiliYN')");
         }
     }
 
@@ -50,12 +51,13 @@ class MKkHeader_Model extends CI_Model {
     public function hapus()
     {
         $id = $this->uri->segment('3');
+        $query = $this->db->query("DELETE FROM tb_kk_detail WHERE hid_dkk = '$id'");
         $query = $this->db->query("DELETE FROM tb_kk_header WHERE id_kk = '$id'");
     }
 
     public function edit()
     {
-        $id=$this->input->post('id');
+        $id = $this->input->post('id');
         $query = $this->db->query("SELECT * FROM tb_kk_header WHERE id_kk = '$id'");
         return $query->result();
     }
