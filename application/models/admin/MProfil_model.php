@@ -10,7 +10,9 @@ class mProfil_model extends CI_Model {
 
     public function getData()
     {
-        $query = $this->db->query("SELECT * from tb_admin ORDER BY id_admin");
+        $query = $this->db->query("SELECT * FROM tb_users 
+                                WHERE User_Akses = 'ADMIN' OR User_Akses = 'OPRATION'
+                                ORDER BY user_id");
         return $query->result();
     }
 
@@ -20,69 +22,23 @@ class mProfil_model extends CI_Model {
         $id = $this->input->post('id');
         $nama = $this->input->post('nama');
         $email = $this->input->post('email');
+        $akses = $this->input->post('akses');
         $password = $this->input->post('password');
-
+        
         $pass = md5($password);
 
 
         if (!empty($id)){
-            //cek jika ada gambar
-            $upload_gambar = $_FILES['gambar']['name'];
-
-            if($upload_gambar){
-                $config['upload_path']          = './assets/images/avatars';
-                $config['allowed_types']        = 'gif|jpg|png';
-                $config['max_size']             = 2000;
-             
-                $this->load->library('upload', $config);
-                
-                //jika gambar sesuai
-                if($this->upload->do_upload('gambar')){
-                    $gambar = $this->upload->data('file_name');
-
-                    $query = $this->db->query("UPDATE tb_admin 
-                    SET nama_admin = '$nama',
-                        email_admin = '$email',
-                        pass_admin = '$pass',
-                        img_admin = '$gambar'
-                    WHERE id_admin = '$id'");   
-                }else{
-                    echo $this->upload->display_errors();
-                }
-            }else{
-                $query = $this->db->query("UPDATE tb_admin 
-                SET nama_admin = '$nama',
-                    email_admin = '$email',
-                    pass_admin = '$pass'
-                WHERE id_admin = '$id'"); 
-            }
+            $query = $this->db->query("UPDATE tb_users 
+                                        SET User_Username = '$nama',
+                                            User_Email = '$email',
+                                            User_Password = '$pass',
+                                            User_Akses = '$akses'
+                                    WHERE User_Id = '$id'");
         } else {
             // insert data
-            //cek jika ada gambar
-            $upload_gambar = $_FILES['gambar']['name'];
-
-            if($upload_gambar){
-                $config['upload_path']          = './assets/images/avatars';
-                $config['allowed_types']        = 'gif|jpg|png';
-                $config['max_size']             = 2048;
-             
-                $this->load->library('upload', $config);
-                
-                //jika gambar sesuai
-                if($this->upload->do_upload('gambar')){
-                    $gambar = $this->upload->data('file_name');
-
-                    $query = $this->db->query("INSERT INTO tb_admin (nama_admin,email_admin,pass_admin,img_admin)
-                    VALUES ('$nama','$email','$pass','$gambar')");   
-                }else{
-                    echo $this->upload->display_errors();
-                }
-
-            }else{
-                //jika tidak ada gambar
-                $query = $this->db->query("INSERT INTO tb_admin (nama_admin,email_admin,pass_admin,img_admin)
-                    VALUES ('$nama','$email','$pass','default.gif')");     
-            }     
+            $query = $this->db->query("INSERT INTO tb_users (user_username,user_email,user_password,user_akses)
+                    VALUES ('$nama','$email','$pass','$akses')");  
         }
     }
 
@@ -90,13 +46,13 @@ class mProfil_model extends CI_Model {
     public function hapus()
     {
         $id = $this->uri->segment('3');
-        $query = $this->db->query("DELETE FROM tb_admin WHERE id_admin = '$id'");
+        $query = $this->db->query("DELETE FROM tb_users WHERE user_id = '$id'");
     }
 
     public function edit()
     {
         $id=$this->input->post('id');
-        $query = $this->db->query("SELECT * FROM tb_admin WHERE id_admin = '$id'");
+        $query = $this->db->query("SELECT * FROM tb_users WHERE user_id = '$id'");
         return $query->result();
     }
 }

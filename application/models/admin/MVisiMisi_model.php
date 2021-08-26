@@ -23,8 +23,9 @@ class mVisiMisi_model extends CI_Model {
 
         if (!empty($id)){
             $query = $this->db->query("UPDATE tb_visimisi 
-                    SET visi_visimisi = '$text1', misi_visimisi = '$text2'
-                    WHERE id_visimisi = '$id'"); 
+                    SET Visimisi_Visi = '$text1', 
+                        Visimisi_Misi = '$text2'
+                    WHERE Visimisi_ID = '$id'"); 
         } 
     }
 

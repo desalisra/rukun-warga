@@ -10,7 +10,7 @@ class mBerita_model extends CI_Model {
 
     public function getData()
     {
-        $query = $this->db->query("SELECT * from tb_berita ORDER BY id_berita DESC");
+        $query = $this->db->query("SELECT * from tb_berita ORDER BY Berita_Id DESC");
         return $query->result();
     }
 
@@ -19,6 +19,7 @@ class mBerita_model extends CI_Model {
         $id = $this->input->post('id');
         $judul = $this->input->post('judul');
         $berita = $this->input->post('berita');
+        $userId = $this->session->userdata('user_id');
 
         if (!empty($id)){
             // EDIT DATA
@@ -37,11 +38,12 @@ class mBerita_model extends CI_Model {
                     $gambar = $this->upload->data('file_name');
 
                     $query = $this->db->query("UPDATE tb_berita 
-                        SET judul_berita = '$judul',
-                            post_berita = '$berita',
-                            img_berita = '$gambar',
-                            tgl_berita = NOW()
-                        WHERE id_berita = '$id' ");   
+                        SET Berita_Judul = '$judul',
+                            Berita_Konten = '$berita',
+                            Berita_Img = '$gambar',
+                            Berita_UpdateId = '$userId',
+                            Berita_UpdateTime = NOW()
+                        WHERE Berita_ID = '$id' ");   
                 }else{
                     echo $this->upload->display_errors();
                 }
@@ -49,10 +51,11 @@ class mBerita_model extends CI_Model {
             }else{
                 //jika tidak ada gambar
                  $query = $this->db->query("UPDATE tb_berita 
-                        SET judul_berita = '$judul',
-                            post_berita = '$berita',
-                            tgl_berita = NOW()
-                        WHERE id_berita = '$id' "); 
+                        SET Berita_Judul = '$judul',
+                            Berita_Konten = '$berita',
+                            Berita_UpdateId = '$userId',
+                            Berita_UpdateTime = NOW()
+                        WHERE Berita_ID = '$id' "); 
             }
         } else {
             //INSERT DATA
@@ -70,23 +73,23 @@ class mBerita_model extends CI_Model {
                 if($this->upload->do_upload('gambar')){
                     $gambar = $this->upload->data('file_name');
 
-                    $query = $this->db->query("INSERT INTO tb_berita (judul_berita,post_berita,img_berita,tgl_berita)
-                    VALUES ('$judul','$berita','$gambar',NOW())");   
+                    $query = $this->db->query("INSERT INTO tb_berita (Berita_Judul, Berita_Konten, Berita_Img, Berita_UpdateId, Berita_UpdateTime)
+                    VALUES ('$judul', '$berita', '$gambar', '$userId', NOW())");   
                 }else{
                     echo $this->upload->display_errors();
                 }
 
             }else{
                 //jika tidak ada gambar
-                 $query = $this->db->query("INSERT INTO tb_berita (judul_berita,post_berita,img_berita,tgl_berita)
-                    VALUES ('$judul','$berita','no-image.svg',NOW())");     
+                 $query = $this->db->query("INSERT INTO tb_berita (Berita_Judul, Berita_Konten, Berita_Img, Berita_UpdateId, Berita_UpdateTime)
+                    VALUES ('$judul', '$berita', 'no-image.svg', '$userId', NOW())");     
             }
         }
     }
 
     public function edit($id)
     {
-        $query = $this->db->query("SELECT * FROM tb_berita WHERE id_berita = '$id'");
+        $query = $this->db->query("SELECT * FROM tb_berita WHERE Berita_ID = '$id'");
         return $query->row();
     }
 
@@ -94,7 +97,7 @@ class mBerita_model extends CI_Model {
     public function hapus()
     {
         $id = $this->uri->segment('3');
-        $query = $this->db->query("DELETE FROM tb_berita WHERE id_berita = '$id'");
+        $query = $this->db->query("DELETE FROM tb_berita WHERE Berita_ID = '$id'");
     }
 
 	

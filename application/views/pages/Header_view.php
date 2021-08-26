@@ -30,8 +30,7 @@
           <a class="nav-item nav-link active" href="<?= base_url('pages') ?>">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="<?= base_url('pages/visimisi') ?>">Visi Misi</a>
           <a class="nav-item nav-link" href="<?= base_url('pages/berita') ?>">Kegiatan</a>
-          <a class="nav-item nav-link" href="<?= base_url('pages/pengajuanSurat') ?>">Pengajuan Surat</a>
-          <a class="nav-item nav-link" href="<?= base_url('admin') ?>">Login</a>
+          <a class="nav-item nav-link" href="<?= base_url('auth') ?>">Login</a>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@
 						</h4>
 					</div>
 					<div class="mb-3">
-						<a href="<?= base_url().'mVisiMisi/edit/'.$data->id_visimisi; ?>" class="btn btn-primary">
+						<a href="<?= base_url().'mVisiMisi/edit/'.$data->Visimisi_ID; ?>" class="btn btn-primary">
 							<i class="ace-icon fa fa-pencil-square-o bigger-120" aria-hidden="true"></i>
 							Edit Visi Misi
 						</a>
@@ -41,8 +41,8 @@
 							</tr>
 						</thead>
 							<tr>
-								<td><?= $data->visi_visimisi; ?></td>
-								<td><?= $data->misi_visimisi; ?></td>
+								<td><?= $data->Visimisi_Visi; ?></td>
+								<td><?= $data->Visimisi_Misi; ?></td>
 							</tr> 
 					</table>
 					<!-- BATAS DATAGRID BERDASARKAN DATA YANG AKAN KITA TAMPILKAN -->

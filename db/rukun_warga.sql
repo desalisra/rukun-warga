@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 30, 2021 at 08:54 AM
--- Server version: 10.1.34-MariaDB
--- PHP Version: 7.2.7
+-- Generation Time: Aug 26, 2021 at 09:03 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,46 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
---
-
-CREATE TABLE `tb_admin` (
-  `id_admin` int(11) NOT NULL,
-  `nama_admin` varchar(255) NOT NULL,
-  `email_admin` varchar(255) NOT NULL,
-  `pass_admin` text NOT NULL,
-  `img_admin` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_admin`
---
-
-INSERT INTO `tb_admin` (`id_admin`, `nama_admin`, `email_admin`, `pass_admin`, `img_admin`) VALUES
-(3, 'admin', 'admin@mail.com', '21232f297a57a5a743894a0e4a801fc3', 'default.gif');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tb_berita`
 --
 
 CREATE TABLE `tb_berita` (
-  `id_berita` int(11) NOT NULL,
-  `judul_berita` varchar(255) NOT NULL,
-  `post_berita` text NOT NULL,
-  `img_berita` varchar(255) DEFAULT NULL,
-  `tgl_berita` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Berita_Id` tinyint(4) NOT NULL,
+  `Berita_Judul` varchar(100) NOT NULL,
+  `Berita_Konten` text NOT NULL,
+  `Berita_Img` varchar(100) NOT NULL,
+  `Berita_UpdateId` tinyint(4) NOT NULL,
+  `Berita_UpdateTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_berita`
 --
 
-INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita`, `tgl_berita`) VALUES
-(2, 'Acara 17 Agustus 2020', '<p>17 Agustus adalah hari sakral yang biasanya kita rayakan disaat seperti ini</p><p>Akan tetapi tahun ini pandemi Covid-19 terjadi. Kegiatan masyarakat Indonesia lumpuh sejak Maret 2020 karena adanya pembatasan. Imbauan untuk tidak mengadakan lomba \"17 Agustusan\" pun muncul ke permukaan, Kota Bekasi, Kota Tangerang dan Solo merupakan beberapa di antaranya. Wali Kota Tangerang Arief Wismansyah mengeluarkan surat edaran terkait larangan berkerumun untuk memperingati Hari Kemerdekaan Republik Indonesia.</p><p>Imbauan larangan Surat bernomor 003.1/1793/HUMAS-PROTOKOL/2020 tersebut memuat sejumlah poin salah satunya yakni masyarakat diminta untuk meniadakan acara kegiatan yang sifatnya mengundang kerumunan, termasuk lomba-lomba 17 Agustus yang biasa dibuat oleh masyarakat untuk menyemarakkan peringatan HUT Kemerdekaan Republik Indonesia</p>', 'slide1.jpg', '2021-06-22 16:45:23'),
-(3, 'PENGUMUMAN HARI RAYA IDUL ADHA 1441H', '<p>Idul Adha 1441 H</p><p><br></p><p>Nomor : 004/PAN-IdulAdhaRT02/RT04/2020 Tangerang, 11 Juli 2020</p><p>Lampiran : -</p><p>Perihal : Edaran Partisipasi Qurban Idul Adha 1441 H</p><p>Kepada Yth,</p><p>Ibu/Bapak/Saudara/i ______________________</p><p>Warga RT.02 RW.04</p><p>di Tempat</p><p>Assalamu’alaikum wa rahmatullahi wa barakatuh.</p><p>Syukur Alhamdulillah marilah kita panjatkan kehadirat Alloh SWT yang telah memberikan kenikmatan Islam kepada kita semua. Sholawat serta salam semoga tetap tercurah kepada Nabi Muhamad SAW beserta keluarganya, para sahabatnya dan semoga sampai kepada kita sebagai umatnya yang senantiasa istiqomah menjalankan syariatnya.</p><p>Teriring salam dan doa kami sampaikan semoga Bapak/Ibu/Sdr/i Warga RT.02 RW.04 Larangan Utara senantiasa dalam lindungan, rahmat, maghfiroh dan karunia rizki yang barokah dari Allah SWT.</p><p>Menyambut datangnya Hari Raya Idul Adha 1441 H atau yang Insya Alloh jatuh pada Minggu, 31 Juli 2020 dengan ini disampaikan bahwa Pengurus DKM Masjid Asy-Syifa telah membentuk Kepanitiaan Idul Adha 1441 H. yang bersedia dan siap untuk menerima serta menyalurkan hewan qurban dari Bapak/Ibu/Sdr/Sdri.</p><p>Oleh karena itu, dalam rangka ketertiban dan kenyamanan bersama dengan ini kami sampaikan hal – hal sebagai berikut : No. Kegiatan Keterangan</p><p><br></p><p>Batas Waktu Pendaftaran</p><p>Minggu, 31 Juli 2020</p><p><br></p><p>Biaya Pemotongan &amp; Perlengkapan.</p><p>Biaya Biaya Pemotongan &amp; Perlengkapan adalah biaya yang sifatnya WAJIB bagi seluruh Penqurban yang digunakan untuk operasional pemotongan dan distribusi hewan Qurban yaitu sebesar</p><p>A. SAPI sebesar Rp. 1.400.000,00 atau terbilang (#satu juta empat ratus ribu rupiah#) per 1 (satu) hewan Sapi atau sebesar Rp. 200.000,00 atau terbilang (#dua ratus ribu rupiah#) per 1/7 bagian hewan Sapi;</p><p>B. KAMBING sebesar Rp. 200.000,00 atau terbilang (#dua ratus ribu rupiah#) per 1 (satu) hewan Kambing.</p><p>C. Pembayaran biaya pemotongan dan perlengkapan bisa melalui :</p><p>Rekening BNI Syariah : xxxxxxxxx an. Efriza</p><p>Konfirmasi : +62 857-xxxx-xxxx</p><p><br></p><p>Panitia hanya menerima dan menyalurkan hewan qurban yang dibeli sendiri oleh penqurban.</p><p>Panitia tidak menyediakan hewan qurban.</p><p><br></p><p>Panitia tidak menyediakan tempat penitipan hewan qurban, sehingga penyerahan dan pengumpulan hewan qurban hanya dibuka maksimal H-1 yaitu hari Selasa tanggal 30 Juli 2020;</p><p>Lokasi Penyerahan Hewan Qurban Mandiri di area Masjid Asy-Syifa</p><p><br></p><p>Diharapkan kepada warga yang berqurban untuk dapat melaksanaan pemotongan hewan qurban atau dapat menyaksikannya pada hari Rabu, 31 Juli 2020 pukul 08.00 WIB di Masjid Al Asy-Syifa</p><p>Tanggal 31 Juli 2020, di Masjid Asy-Syifa sekitar pukul 08.00 WIB ba’da Shalat Ied.</p><p><br></p><p>Bilamana ada pertanyaan lebih lanjut mengenai hal-hal diatas, dapat menghubungi</p><p>1. Bapak Naryo (+62 815-1126-5002)</p><p>2. Bapak Arif Moh. Akbar (+62 811-1496-920 )</p><p>Demikian pemberitahuan ini disampaikan dari kami dalam bentuk edaran untuk disampaikan atas perhatian dan partisipasinya kami ucapkan terima kasih. Semoga Alloh SWT meridhoi amal ibadah kita sekalian. Amin.</p><p>Wassalamu’alaikum wa rahmatullahi waa barakaatuh.</p>', 'slide2.jpg', '2021-06-22 18:11:14'),
-(4, 'PENGUMUMAN HARI RAYA IDUL FITRI 1441H', '<p>Kepada Yth.</p><p>Warga RT.02 RW.04</p><p>di tempat.</p><p><br></p><p>Assalaamu’alaikum warohmatullahi wabarokaatuh,</p><p>Puji syukur selalu kita panjatkan kehadirat Allah Swt atas nikmat &amp; rahmat NYA yang tercurah bagi kita semua, serta solawat berikut salam yang tak pernah kita lupakan bagi junjungan kita Nabiullah Muhammad SAW, semoga kita semua tergolong kepada pengikutnya yang memperoleh syafaat beliau di yaumil akhir kelak. Amin YRA.</p><p>Melaui surat ini, kami panitia kegiatan Ramadhan 1441 H RT.02 RW.04 akan mengadakan sejumlah kegiatan sebagai berikut :</p><p>1. Sholat tarawih (setiap malam selama bulan Ramadhan) dan kultum (pada malam Sabtu, Ahad &amp; tentative)</p><p>2. Tadarus Al Qur’an dan I’tikaf (10 malam terakhir di bulan Ramadhan &amp; akan disediakan hidangan sahur)</p><p>3. Kajian Ba’da Shubuh setiap Sabtu &amp; Ahad (Selama Bulan Ramadhan)</p><p>4. Pesantren Kilat untuk anak (Batas usia 5 – 11 Tahun).</p><p>5. Buka Puasa Bersama di Masjid Al Fattah (Selama bulan Ramadhan)</p><p>6. Penerimaan zakat fitrah hanya dalam bentuk Beras 2,5 kg atau 3,5 liter. Waktu penerimaan sejak hari pertama Ramadhan di Masjid Asy-Syifa</p><p>7. Sholat Idul Fitri</p><p>Sebagai informasi juga bahwa untuk Sholat Idul Fitri akan diadakan di Masjid Asy-Syifa pada pukul 06:30-7:30 WIB</p><p><br></p><p>Demikian surat ini kami sampaikan, kami berharap dengan adanya program ini, bisa menjadi momentum bagi kita untuk senantiasa memperbanyak amal ibadah kita selama Bulan Ramadhan &amp; bulan bulan berikutnya agar kita menjadi orang yang bertaqwa.</p><p><br></p><p>Atas perhatian dan kerjasama Bapak/Ibu/Sdr kami ucapkan terimakasih.</p><p>Wassalamu’alaikum warohmatullahi wabarokaatuh.</p>', 'idul_fitri.JPG', '2021-06-22 18:21:32');
+INSERT INTO `tb_berita` (`Berita_Id`, `Berita_Judul`, `Berita_Konten`, `Berita_Img`, `Berita_UpdateId`, `Berita_UpdateTime`) VALUES
+(1, 'Penyemprotan Desifektan di lingkungan rt 02', '<p>Coba Test</p>', 'hijau.jpg', 2, '2021-08-21 11:29:35'),
+(2, 'PENGUMUMAN HARI RAYA IDUL FITRI 1441H', '<p>Sholat Ied Di lapangan di tiadakan</p>', 'no-image.svg', 2, '2021-08-21 11:30:39'),
+(3, 'Acara 17 Agustus 2020', '<p>Upacara 17 Agustus di adakan di lapangan sekolah&nbsp;</p>', 'no-image.svg', 2, '2021-08-21 11:34:55');
 
 -- --------------------------------------------------------
 
@@ -73,22 +52,22 @@ INSERT INTO `tb_berita` (`id_berita`, `judul_berita`, `post_berita`, `img_berita
 --
 
 CREATE TABLE `tb_keuangan` (
-  `id_transaksi` int(11) NOT NULL,
-  `penerima_transaksi` varchar(50) NOT NULL,
-  `flag_transaksi` varchar(1) NOT NULL,
-  `value_transaksi` int(11) NOT NULL,
-  `keterangan_transaksi` varchar(255) NOT NULL,
-  `tgl_transaksi` datetime NOT NULL
+  `Transaksi_ID` tinyint(11) NOT NULL,
+  `Transaksi_Penerima` varchar(50) NOT NULL,
+  `Transaksi_Flag` enum('D','K') NOT NULL,
+  `Transaksi_Value` int(11) NOT NULL,
+  `Transaksi_Keterangan` varchar(100) NOT NULL,
+  `Transaksi_Tanggal` datetime NOT NULL,
+  `Transaksi_UpdateId` tinyint(4) NOT NULL,
+  `Transaksi_UpdateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_keuangan`
 --
 
-INSERT INTO `tb_keuangan` (`id_transaksi`, `penerima_transaksi`, `flag_transaksi`, `value_transaksi`, `keterangan_transaksi`, `tgl_transaksi`) VALUES
-(1, 'Desal Isra', 'K', 30000, 'Iuran Kebersihan & Keamanan', '2021-06-20 10:16:41'),
-(2, 'Desal Isra', 'D', 30000, 'Pembayaran Petugas Kebersihan & Keamanan', '2021-06-20 10:22:43'),
-(3, 'Efriza', 'K', 100000, 'Iuran Kebersihan & Keamanan', '2021-06-20 10:49:38');
+INSERT INTO `tb_keuangan` (`Transaksi_ID`, `Transaksi_Penerima`, `Transaksi_Flag`, `Transaksi_Value`, `Transaksi_Keterangan`, `Transaksi_Tanggal`, `Transaksi_UpdateId`, `Transaksi_UpdateTime`) VALUES
+(1, 'Desal Isra', 'K', 30000, 'Iuran Kebersihan & Keamanan', '2021-08-26 13:23:17', 2, '2021-08-26 13:23:17');
 
 -- --------------------------------------------------------
 
@@ -97,17 +76,26 @@ INSERT INTO `tb_keuangan` (`id_transaksi`, `penerima_transaksi`, `flag_transaksi
 --
 
 CREATE TABLE `tb_kk_detail` (
-  `id_dkk` int(11) NOT NULL,
-  `hid_dkk` int(11) NOT NULL,
-  `nik_dkk` varchar(20) NOT NULL,
-  `nama_dkk` varchar(50) NOT NULL,
-  `jk_dkk` varchar(1) NOT NULL,
-  `tmpLahir_dkk` varchar(20) NOT NULL,
-  `tglLahir_dkk` date NOT NULL,
-  `agama_dkk` varchar(10) NOT NULL,
-  `pendidikan_dkk` varchar(20) NOT NULL,
-  `pekerjaan_dkk` varchar(20) NOT NULL
+  `KKD_ID` tinyint(4) NOT NULL,
+  `KKD_IdHeader` tinyint(4) NOT NULL,
+  `KKD_Nama` varchar(50) NOT NULL,
+  `KKD_NIK` varchar(20) NOT NULL,
+  `KKD_Jk` enum('L','P') NOT NULL,
+  `KKD_TmpLahir` varchar(50) NOT NULL,
+  `KKD_TglLahir` date NOT NULL,
+  `KKD_Agama` enum('ISLAM','KRISTEN','KATOLIK','HINDU','BUDHA') NOT NULL,
+  `KKD_Pendidikan` varchar(10) NOT NULL,
+  `KKD_Pekerjaan` varchar(20) NOT NULL,
+  `KKD_UpdateID` tinyint(4) NOT NULL,
+  `KKD_UpdateTime` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_kk_detail`
+--
+
+INSERT INTO `tb_kk_detail` (`KKD_ID`, `KKD_IdHeader`, `KKD_Nama`, `KKD_NIK`, `KKD_Jk`, `KKD_TmpLahir`, `KKD_TglLahir`, `KKD_Agama`, `KKD_Pendidikan`, `KKD_Pekerjaan`, `KKD_UpdateID`, `KKD_UpdateTime`) VALUES
+(2, 1, 'Desal Isra', '3173082808971001', 'L', 'Bekasi', '1997-08-28', 'ISLAM', 'SMK', 'Karyawan Swasta', 1, '2021-08-21');
 
 -- --------------------------------------------------------
 
@@ -116,13 +104,23 @@ CREATE TABLE `tb_kk_detail` (
 --
 
 CREATE TABLE `tb_kk_header` (
-  `id_kk` int(11) NOT NULL,
-  `no_kk` varchar(20) NOT NULL,
-  `kepala_kk` varchar(50) NOT NULL,
-  `telp_kk` varchar(15) NOT NULL,
-  `alamat_kk` text NOT NULL,
-  `domisili_kk` varchar(1) NOT NULL
+  `KKH_ID` tinyint(4) NOT NULL,
+  `KKH_NoKK` varchar(20) NOT NULL,
+  `KKH_KepalaKK` varchar(50) NOT NULL,
+  `KKH_Tlp` varchar(15) NOT NULL,
+  `KKH_Alamat` text NOT NULL,
+  `KKH_DomisiliYN` enum('Y','N') NOT NULL,
+  `KKH_Status` char(1) DEFAULT NULL,
+  `KKH_UpdateID` tinyint(4) NOT NULL,
+  `KKH_UpdateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_kk_header`
+--
+
+INSERT INTO `tb_kk_header` (`KKH_ID`, `KKH_NoKK`, `KKH_KepalaKK`, `KKH_Tlp`, `KKH_Alamat`, `KKH_DomisiliYN`, `KKH_Status`, `KKH_UpdateID`, `KKH_UpdateTime`) VALUES
+(1, '3173082808971001', 'Desal Israa', '085216534729', 'Jl. Kavling No 41 A', 'Y', 'C', 1, '2021-08-09 16:16:16');
 
 -- --------------------------------------------------------
 
@@ -131,26 +129,48 @@ CREATE TABLE `tb_kk_header` (
 --
 
 CREATE TABLE `tb_surat` (
-  `srt_id` int(11) NOT NULL,
-  `srt_noSurat` varchar(20) NOT NULL,
-  `srt_nik` varchar(20) DEFAULT NULL,
-  `srt_nama` varchar(50) DEFAULT NULL,
-  `srt_tmpLahir` text,
-  `srt_tglLahir` date DEFAULT NULL,
-  `srt_jk` enum('L','P') DEFAULT NULL,
-  `srt_agama` varchar(10) DEFAULT NULL,
-  `srt_alamat` text,
-  `srt_keperluan` varchar(100) DEFAULT NULL,
-  `srt_tglPengajuan` datetime DEFAULT NULL,
-  `srt_stsPrint` int(11) DEFAULT NULL
+  `Surat_ID` tinyint(4) NOT NULL,
+  `Surat_Numb` varchar(20) NOT NULL,
+  `Surat_IdKKD` tinyint(4) NOT NULL,
+  `Surat_Keperluan` varchar(100) NOT NULL,
+  `Surat_Pengajuan` tinyint(4) NOT NULL,
+  `Surat_TglPengajuan` datetime NOT NULL,
+  `Surat_PrintYN` enum('Y','N') NOT NULL,
+  `Surat_UpdateID` tinyint(4) NOT NULL,
+  `Surat_UpdateTime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_surat`
 --
 
-INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmpLahir`, `srt_tglLahir`, `srt_jk`, `srt_agama`, `srt_alamat`, `srt_keperluan`, `srt_tglPengajuan`, `srt_stsPrint`) VALUES
-(1, '001/SRT/VI/2021', '123456789', 'camat', 'Bekasi', '1997-08-28', 'L', 'Islam', 'jl jalan', 'Pembuatan KTP', '2021-06-22 17:19:40', 1);
+INSERT INTO `tb_surat` (`Surat_ID`, `Surat_Numb`, `Surat_IdKKD`, `Surat_Keperluan`, `Surat_Pengajuan`, `Surat_TglPengajuan`, `Surat_PrintYN`, `Surat_UpdateID`, `Surat_UpdateTime`) VALUES
+(1, '001/SRT/VIII/2021', 2, 'Pembuatan KTP', 1, '2021-08-21 10:05:26', 'Y', 1, '2021-08-24 19:32:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_users`
+--
+
+CREATE TABLE `tb_users` (
+  `User_Id` tinyint(4) NOT NULL,
+  `User_Email` varchar(50) DEFAULT NULL,
+  `User_Username` varchar(50) NOT NULL,
+  `User_Password` text NOT NULL,
+  `User_Akses` enum('ADMIN','OPRATION','USER') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tb_users`
+--
+
+INSERT INTO `tb_users` (`User_Id`, `User_Email`, `User_Username`, `User_Password`, `User_Akses`) VALUES
+(1, 'desalisra48@gmail.com', 'DESAL ISRA', '59e07474a9058e1b169bde5363e291ea', 'USER'),
+(2, 'admin@mail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'ADMIN'),
+(3, 'oprator@mail.com', 'opration', 'e10adc3949ba59abbe56e057f20f883e', 'OPRATION'),
+(6, 'efriza@mail.com', 'EFRIZA', 'e10adc3949ba59abbe56e057f20f883e', 'USER'),
+(7, 'efriza@mail.com', 'Efriza', 'e10adc3949ba59abbe56e057f20f883e', 'ADMIN');
 
 -- --------------------------------------------------------
 
@@ -159,120 +179,161 @@ INSERT INTO `tb_surat` (`srt_id`, `srt_noSurat`, `srt_nik`, `srt_nama`, `srt_tmp
 --
 
 CREATE TABLE `tb_visimisi` (
-  `id_visimisi` int(11) NOT NULL,
-  `visi_visimisi` text NOT NULL,
-  `misi_visimisi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Visimisi_ID` tinyint(4) NOT NULL,
+  `Visimisi_Visi` text NOT NULL,
+  `Visimisi_Misi` text NOT NULL,
+  `Visimisi_UpdateId` tinyint(4) NOT NULL,
+  `Visimisi_UpdateTime` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_visimisi`
 --
 
-INSERT INTO `tb_visimisi` (`id_visimisi`, `visi_visimisi`, `misi_visimisi`) VALUES
-(1, '<p>Membuat lingkungan tempat tinggal &nbsp;yang&nbsp; aman serta kerukunan antar warga yang nyaman serta adil dan menjadikan pelayanan masyarakat yang cepat dan transparan</p>', '<p>1. Menjalin kerukunan antar warga, umat beragama dan bernegara</p><p>2. Menjalin Kerjasama dalam menjaga dan memelihara kebersihan dan keamanan lingkungan.</p><p>3. Santun dalam menghadapi suatu persoalan yang dihadapi dari Internal maupun Eksternal.</p><p>4. Bersifat Objektif dan Transparan dalam pengelolahan administratif</p><p>5. Memfasilitasi keinginan warga dalam berbagai kegiatan social.</p><p>6. Meningkatkan mutu pelayanan warga dalam hal administrasi kependudukan.</p><p>7. Menggali potensi warga untuk pemberdayaan dan peningkatan ekonomi warga.</p><p>8. Siap melaksanakan program-program yang dilontarkan pemerintah Provinsi Banten melalui Pemerintah Kelurahan Larangan Utara.</p>');
+INSERT INTO `tb_visimisi` (`Visimisi_ID`, `Visimisi_Visi`, `Visimisi_Misi`, `Visimisi_UpdateId`, `Visimisi_UpdateTime`) VALUES
+(1, 'Membuat lingkungan tempat tinggal  yang  aman serta kerukunan antar warga yang nyaman serta adil dan menjadikan pelayanan masyarakat yang cepat dan transparan', '1. Menjalin kerukunan antar warga, umat beragama dan bernegara\r\n\r\n2. Menjalin Kerjasama dalam menjaga dan memelihara kebersihan dan keamanan lingkungan.\r\n\r\n3. Santun dalam menghadapi suatu persoalan yang dihadapi dari Internal maupun Eksternal.\r\n\r\n4. Bersifat Objektif dan Transparan dalam pengelolahan administratif\r\n\r\n5. Memfasilitasi keinginan warga dalam berbagai kegiatan social.\r\n\r\n6. Meningkatkan mutu pelayanan warga dalam hal administrasi kependudukan.\r\n\r\n7. Menggali potensi warga untuk pemberdayaan dan peningkatan ekonomi warga.\r\n\r\n8. Siap melaksanakan program-program yang dilontarkan pemerintah Provinsi Banten melalui Pemerintah Kelurahan Larangan Utara.', 2, '2021-08-26 13:08:07');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tb_admin`
---
-ALTER TABLE `tb_admin`
-  ADD PRIMARY KEY (`id_admin`);
-
---
 -- Indexes for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  ADD PRIMARY KEY (`id_berita`);
+  ADD PRIMARY KEY (`Berita_Id`),
+  ADD KEY `Berita_UpdateId` (`Berita_UpdateId`);
 
 --
 -- Indexes for table `tb_keuangan`
 --
 ALTER TABLE `tb_keuangan`
-  ADD PRIMARY KEY (`id_transaksi`);
+  ADD PRIMARY KEY (`Transaksi_ID`),
+  ADD KEY `Transaksi_UpdateId` (`Transaksi_UpdateId`);
 
 --
 -- Indexes for table `tb_kk_detail`
 --
 ALTER TABLE `tb_kk_detail`
-  ADD PRIMARY KEY (`id_dkk`),
-  ADD KEY `hid_dkk` (`hid_dkk`);
+  ADD PRIMARY KEY (`KKD_ID`),
+  ADD KEY `KKD_IdHeader` (`KKD_IdHeader`),
+  ADD KEY `KKD_UpdateID` (`KKD_UpdateID`);
 
 --
 -- Indexes for table `tb_kk_header`
 --
 ALTER TABLE `tb_kk_header`
-  ADD PRIMARY KEY (`id_kk`);
+  ADD PRIMARY KEY (`KKH_ID`),
+  ADD KEY `KKH_UpdateID` (`KKH_UpdateID`);
 
 --
 -- Indexes for table `tb_surat`
 --
 ALTER TABLE `tb_surat`
-  ADD PRIMARY KEY (`srt_id`);
+  ADD PRIMARY KEY (`Surat_ID`),
+  ADD UNIQUE KEY `Surat_Pengajuan` (`Surat_Pengajuan`),
+  ADD KEY `Surat_UpdateID` (`Surat_UpdateID`),
+  ADD KEY `Surat_IdKKD` (`Surat_IdKKD`);
+
+--
+-- Indexes for table `tb_users`
+--
+ALTER TABLE `tb_users`
+  ADD PRIMARY KEY (`User_Id`);
 
 --
 -- Indexes for table `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
-  ADD PRIMARY KEY (`id_visimisi`);
+  ADD PRIMARY KEY (`Visimisi_ID`),
+  ADD KEY `Visimisi_UpdateId` (`Visimisi_UpdateId`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `tb_admin`
---
-ALTER TABLE `tb_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Berita_Id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_keuangan`
 --
 ALTER TABLE `tb_keuangan`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Transaksi_ID` tinyint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_kk_detail`
 --
 ALTER TABLE `tb_kk_detail`
-  MODIFY `id_dkk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `KKD_ID` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_kk_header`
 --
 ALTER TABLE `tb_kk_header`
-  MODIFY `id_kk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `KKH_ID` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tb_surat`
 --
 ALTER TABLE `tb_surat`
-  MODIFY `srt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Surat_ID` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tb_users`
+--
+ALTER TABLE `tb_users`
+  MODIFY `User_Id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tb_visimisi`
 --
 ALTER TABLE `tb_visimisi`
-  MODIFY `id_visimisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Visimisi_ID` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `tb_berita`
+--
+ALTER TABLE `tb_berita`
+  ADD CONSTRAINT `tb_berita_ibfk_1` FOREIGN KEY (`Berita_UpdateId`) REFERENCES `tb_users` (`User_Id`);
+
+--
+-- Constraints for table `tb_keuangan`
+--
+ALTER TABLE `tb_keuangan`
+  ADD CONSTRAINT `tb_keuangan_ibfk_1` FOREIGN KEY (`Transaksi_UpdateId`) REFERENCES `tb_users` (`User_Id`);
+
+--
 -- Constraints for table `tb_kk_detail`
 --
 ALTER TABLE `tb_kk_detail`
-  ADD CONSTRAINT `tb_kk_detail_ibfk_1` FOREIGN KEY (`hid_dkk`) REFERENCES `tb_kk_header` (`id_kk`);
+  ADD CONSTRAINT `tb_kk_detail_ibfk_1` FOREIGN KEY (`KKD_IdHeader`) REFERENCES `tb_kk_header` (`KKH_ID`);
+
+--
+-- Constraints for table `tb_kk_header`
+--
+ALTER TABLE `tb_kk_header`
+  ADD CONSTRAINT `tb_kk_header_ibfk_1` FOREIGN KEY (`KKH_UpdateID`) REFERENCES `tb_users` (`User_Id`);
+
+--
+-- Constraints for table `tb_surat`
+--
+ALTER TABLE `tb_surat`
+  ADD CONSTRAINT `tb_surat_ibfk_1` FOREIGN KEY (`Surat_UpdateID`) REFERENCES `tb_users` (`User_Id`),
+  ADD CONSTRAINT `tb_surat_ibfk_2` FOREIGN KEY (`Surat_IdKKD`) REFERENCES `tb_kk_detail` (`KKD_ID`);
+
+--
+-- Constraints for table `tb_visimisi`
+--
+ALTER TABLE `tb_visimisi`
+  ADD CONSTRAINT `tb_visimisi_ibfk_1` FOREIGN KEY (`Visimisi_UpdateId`) REFERENCES `tb_users` (`User_Id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

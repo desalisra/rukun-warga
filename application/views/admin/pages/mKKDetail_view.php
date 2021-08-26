@@ -15,15 +15,15 @@
           success: function(data) {
             var i;
             for (i = 0; i < data.length; i++) {
-              $("#id").val(data[i].id_dkk);
-              $("#nik").val(data[i].nik_dkk);
-              $("#nama").val(data[i].nama_dkk);
-              $("#jk").val(data[i].jk_dkk);
-              $("#tmpLahir").val(data[i].tmpLahir_dkk);
-              $("#tglLahir").val(data[i].tglLahir_dkk);
-              $("#agama").val(data[i].agama_dkk);
-              $("#pendidikan").val(data[i].pendidikan_dkk);
-              $("#pekerjaan").val(data[i].pekerjaan_dkk);
+              $("#id").val(data[i].KKD_ID);
+              $("#nik").val(data[i].KKD_NIK);
+              $("#nama").val(data[i].KKD_Nama);
+              $("#jk").val(data[i].KKD_Jk);
+              $("#tmpLahir").val(data[i].KKD_TmpLahir);
+              $("#tglLahir").val(data[i].KKD_TglLahir);
+              $("#agama").val(data[i].KKD_Agama);
+              $("#pendidikan").val(data[i].KKD_Pendidikan);
+              $("#pekerjaan").val(data[i].KKD_Pekerjaan);
             }
           }
         });
@@ -82,14 +82,14 @@
             $idHeader = "";
             foreach ($header as $row) { ?>
               <tr>
-                <td><?= $row->no_kk; ?></td>
-                <td><?= $row->kepala_kk; ?></td>
-                <td><?= $row->telp_kk; ?></td>
-                <td><?= $row->alamat_kk; ?></td>
-                <td class="center"><?= $row->domisili_kk; ?></td>
+                <td><?= $row->KKH_NoKK; ?></td>
+                <td><?= $row->KKH_KepalaKK; ?></td>
+                <td><?= $row->KKH_Tlp; ?></td>
+                <td><?= $row->KKH_Alamat; ?></td>
+                <td class="center"><?= $row->KKH_DomisiliYN; ?></td>
               </tr>
             <?php
-              $idHeader = $row->id_kk;
+              $idHeader = $row->KKH_ID;
             }
             ?>
           </table>
@@ -125,22 +125,22 @@
                       <i class="ace-icon fa fa-file-o bigger-140"></i>
                     </a>
                     |
-                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" onclick="ubahData(<?= $row->id_dkk; ?>)">
+                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" onclick="ubahData(<?= $row->KKD_ID; ?>)">
                       <i class="ace-icon fa fa-pencil-square-o bigger-150"></i>
                     </a>
                     |
-                    <a href="<?= base_url(); ?>/MKKDetail/hapus/<?= $row->id_dkk . "/" . $row->hid_dkk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+                    <a href="<?= base_url(); ?>/MKKDetail/hapus/<?= $row->KKD_ID . "/" . $row->KKD_IdHeader; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
                       <i class="ace-icon fa fa-trash-o bigger-150"></i>
                     </a>
                   </td>
-                  <td><?= $row->nik_dkk; ?></td>
-                  <td><?= $row->nama_dkk; ?></td>
-                  <td><?= $row->jk_dkk; ?></td>
-                  <td><?= $row->tmpLahir_dkk; ?></td>
-                  <td><?= $row->tglLahir_dkk; ?></td>
-                  <td><?= $row->agama_dkk; ?></td>
-                  <td><?= $row->pendidikan_dkk; ?></td>
-                  <td><?= $row->pekerjaan_dkk; ?></td>
+                  <td><?= $row->KKD_NIK; ?></td>
+                  <td><?= $row->KKD_Nama; ?></td>
+                  <td><?= $row->KKD_Jk; ?></td>
+                  <td><?= $row->KKD_TmpLahir; ?></td>
+                  <td><?= $row->KKD_TglLahir; ?></td>
+                  <td><?= $row->KKD_Agama; ?></td>
+                  <td><?= $row->KKD_Pendidikan; ?></td>
+                  <td><?= $row->KKD_Pekerjaan; ?></td>
                 </tr>
               <?php
               }
@@ -225,11 +225,11 @@
             <td style="width: 75%">
               <select class="form-control" name="agama" id="agama" required>
                 <option value="">-- Pilih Agama --</option>
-                <option value="Islam">Islam</option>
-                <option value="Kristen">Kristen</option>
-                <option value="Khatolik">Khatolik</option>
-                <option value="Hindu">Hindu</option>
-                <option value="Budha">Budha</option>
+                <option value="ISLAM">Islam</option>
+                <option value="KRISTEN">Kristen</option>
+                <option value="KATOLIK">Khatolik</option>
+                <option value="HINDU">Hindu</option>
+                <option value="BUDHA">Budha</option>
               </select>
             </td>
           </tr>

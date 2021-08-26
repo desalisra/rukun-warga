@@ -5,12 +5,14 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h2><?= $row->judul_berita ?></h2>
+				<h2><?= $row->Berita_Judul ?></h2>
+				<small class="mr-5">Created By : <?= $row->User_Username ?></small> <br>
+				<small>Publish : <?= $row->Berita_UpdateTime ?></small>
 				<hr>
 
 				<!-- Bagian Berita -->
-				<img width="50%" src="<?= base_url() . 'assets/img/berita/' . $row->img_berita ?>" alt="">
-				<p><?= $row->post_berita ?></p>
+				<img width="50%" src="<?= base_url() . 'assets/img/berita/' . $row->Berita_Img ?>" alt="">
+				<p><?= $row->Berita_Konten ?></p>
 
 			</div>
 		</div>

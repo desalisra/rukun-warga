@@ -45,9 +45,9 @@
 					<ul class="nav ace-nav">
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?= base_url().'assets/images/avatars/'.$this->session->userdata("admin_img"); ?>" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="<?= base_url().'assets/images/avatars/default.gif' ?>" alt="user" />
 								<span class="user-info">
-									<small>Selamat datang,</small>
+									<small>Selamat datang</small>
 									<?= $this->session->userdata("admin_nama"); ?>
 								</span>
 
@@ -55,14 +55,16 @@
 							</a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<?php if ($this->session->userdata('user_akses') == "ADMIN") { ?>
 								<li>
 									<a href="<?php echo base_url('MProfil')?>">
 										<i class="ace-icon fa fa-user"></i>
 										Management Admin
 									</a>
 								</li>
+								<?php } ?>
 								<li>
-									<a href="<?php echo base_url('admin/logout')?>">
+									<a href="<?php echo base_url('auth/logout')?>">
 										<i class="ace-icon fa fa-power-off"></i>
 										Logout
 									</a>

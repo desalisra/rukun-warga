@@ -17,15 +17,15 @@
 				<div class="col-xs-8">
 					<?php if($edit){ ?>
 						<form action="<?= base_url('mVisiMisi/edit')?>" method="post" enctype="multipart/form-data">
-							<input type="hidden" name="id" class="form-control" value="<?= $data->id_visimisi?>">
+							<input type="hidden" name="id" class="form-control" value="<?= $data->Visimisi_ID?>">
 							<div class="form-group">
 								<label class="pink">Visi</label>
-								<textarea id="froala-editor" name="text1" rows="10"><?= $data->visi_visimisi; ?></textarea>
+								<textarea id="froala-editor" name="text1" rows="10"><?= $data->Visimisi_Visi; ?></textarea>
 								<?= form_error('berita','<small class="text-danger">','</small>')?>
 							</div>
 							<div class="form-group">
 								<label class="pink">Misi</label>
-								<textarea id="froala-editor" name="text2" rows="10"><?= $data->misi_visimisi; ?></textarea>
+								<textarea id="froala-editor" name="text2" rows="10"><?= $data->Visimisi_Misi; ?></textarea>
 								<?= form_error('berita','<small class="text-danger">','</small>')?>
 							</div>
 							<button type="submit" class="btn btn-primary">

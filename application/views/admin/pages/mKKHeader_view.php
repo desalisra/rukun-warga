@@ -1,3 +1,5 @@
+<?php $userAkses = $this->session->userdata('user_akses'); ?>
+
 <!-- HEADER TITLE -->
 <div class="main-content">
 	<div class="main-content-inner">
@@ -15,12 +17,12 @@
 					success: function(data) {
 						var i;
 						for (i = 0; i < data.length; i++) {
-							$("#id").val(data[i].id_kk);
-							$("#nokk").val(data[i].no_kk);
-							$("#nama").val(data[i].kepala_kk);
-							$("#telepon").val(data[i].telp_kk);
-							$("#alamat").val(data[i].alamat_kk);
-							if (data[i].domisili_kk == "Y") {
+							$("#id").val(data[i].KKH_ID);
+							$("#nokk").val(data[i].KKH_NoKK);
+							$("#nama").val(data[i].KKH_KepalaKK);
+							$("#telepon").val(data[i].KKH_Tlp);
+							$("#alamat").val(data[i].KKH_Alamat);
+							if (data[i].KKH_DomisiliYN == "Y") {
 								$("#domisili").attr("checked", "checked");
 							}
 						}
@@ -65,45 +67,56 @@
 					</div>
 					<!-- BATAS HEADER TITLE -->
 					<div class="ln_solid"></div>
-
-
+					
+					<!-- Flash Message -->
+					<?= $this->session->flashdata('message'); ?>
 
 					<!--DATAGRID BERDASARKAN DATA YANG AKAN KITA TAMPILKAN -->
 					<table id="dataTable" class="table table-striped table-bordered">
 						<thead>
 							<tr>
 								<th width="10%" class="center">
-									<a href="#m_modal" onclick="tambahData();" class="tooltip-info" data-toggle="modal" data-rel="tooltip" title="Tambah">
-										<span class="blue"><i class="ace-icon fa fa-plus bigger-120"></i> Add Data</span></a>
+									<?php if($userAkses == "USER"){ ?>
+										<a href="#m_modal" onclick="tambahData();" class="tooltip-info" data-toggle="modal" data-rel="tooltip" title="Tambah">
+											<span class="blue"><i class="ace-icon fa fa-plus bigger-120"></i> Add Data</span>
+										</a>
+									<?php }else{ echo "Action"; } ?>
 								</th>
 								<th width="20%">No KK</th>
 								<th width="20%">Kepala Keluarga</th>
 								<th width="10%" class="center">Telepon</th>
-								<th width="30%">Alamat</th>
-								<th width="5%" class="center">Status Domisili</th>
+								<th width="25%">Alamat</th>
+								<th width="5%" class="center">Domisili</th>
+								<th width="5%" class="center">Status</th>
 							</tr>
 						</thead>
 						<?php
 						foreach ($data as $row) { ?>
 							<tr>
 								<td>
-									<a href="<?= base_url(); ?>MKKDetail/index/<?= $row->id_kk; ?>" class="tooltip-primary" data-rel="tooltip" title="Detail">
+									<?php if($userAkses == "ADMIN"){ ?>
+										<a href="<?= base_url(); ?>/MKKHeader/confirm/<?= $row->KKH_ID; ?>" class="tooltip-primary" data-rel="tooltip" title="Confirm">
+											<i class="ace-icon fa fa-check-square-o bigger-140"></i>
+										</a> |
+									<?php } ?>
+									<a href="<?= base_url(); ?>MKKDetail/index/<?= $row->KKH_ID; ?>" class="tooltip-primary" data-rel="tooltip" title="Detail">
 										<i class="ace-icon fa fa-file-o bigger-140"></i>
-									</a>
-									|
-									<a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" onclick="ubahData(<?= $row->id_kk; ?>)">
-										<i class="ace-icon fa fa-pencil-square-o bigger-150"></i>
-									</a>
-									|
-									<a href="<?= base_url(); ?>/MKKHeader/hapus/<?= $row->id_kk; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
-										<i class="ace-icon fa fa-trash-o bigger-150"></i>
-									</a>
+									</a> |
+									<?php if($userAkses == "USER"){ ?>
+										<a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" onclick="ubahData(<?= $row->KKH_ID; ?>)">
+											<i class="ace-icon fa fa-pencil-square-o bigger-150"></i>
+										</a> |
+										<a href="<?= base_url(); ?>/MKKHeader/hapus/<?= $row->KKH_ID; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+											<i class="ace-icon fa fa-trash-o bigger-150"></i>
+										</a>
+									<?php } ?>
 								</td>
-								<td><?= $row->no_kk; ?></td>
-								<td><?= $row->kepala_kk; ?></td>
-								<td><?= $row->telp_kk; ?></td>
-								<td><?= $row->alamat_kk; ?></td>
-								<td class="center"><?= $row->domisili_kk; ?></td>
+								<td><?= $row->KKH_NoKK; ?></td>
+								<td><?= $row->KKH_KepalaKK; ?></td>
+								<td><?= $row->KKH_Tlp; ?></td>
+								<td><?= $row->KKH_Alamat; ?></td>
+								<td class="center"><?= $row->KKH_DomisiliYN; ?></td>
+								<td><?= $row->KKH_Status == "C" ? "Data Terverifikasi" : "Menunggu Verifikasi"; ?></td>
 							</tr>
 						<?php } ?>
 					</table>
@@ -179,5 +192,4 @@
 			</div>
 		</form>
 	</div>
-</div>
 </div>

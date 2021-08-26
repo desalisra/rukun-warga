@@ -10,7 +10,9 @@ class Berita_model extends CI_Model {
 
     public function getData()
     {
-        $query = $this->db->query("SELECT * FROM tb_berita ORDER BY tgl_berita DESC");
+        $query = $this->db->query("SELECT * FROM tb_berita 
+                                LEFT JOIN tb_users ON Berita_UpdateId = User_Id 
+                                ORDER BY Berita_UpdateTime DESC");
         return $query->result();
     }
 
@@ -19,7 +21,9 @@ class Berita_model extends CI_Model {
     {
         $id = $this->uri->segment('3');
 
-        $query = $this->db->query("SELECT * FROM tb_berita WHERE  id_berita = '$id' ");
+        $query = $this->db->query("SELECT * FROM tb_berita 
+                                LEFT JOIN tb_users ON Berita_UpdateId = User_Id 
+                                WHERE Berita_Id  = '$id' ");
         return $query->row();
     }   
 	

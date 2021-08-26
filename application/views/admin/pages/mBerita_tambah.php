@@ -26,14 +26,14 @@
 					<?php if ($edit) { ?>
 						<form action="<?= base_url('mBerita/edit') ?>" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								<input type="hidden" name="id" class="form-control" value="<?= $row->id_berita; ?>">
+								<input type="hidden" name="id" class="form-control" value="<?= $row->Berita_Id; ?>">
 							</div>
 							<div class="form-group">
-								<input type="text" id="judul" name="judul" class="form-control" placeholder="Judul Berita" value="<?= $row->judul_berita; ?>">
+								<input type="text" id="judul" name="judul" class="form-control" placeholder="Judul Berita" value="<?= $row->Berita_Judul; ?>">
 								<?= form_error('judul', '<small class="text-danger">', '</small>') ?>
 							</div>
 							<div class="form-group">
-								<textarea id="froala-editor" name="berita" rows="10"><?= $row->post_berita; ?></textarea>
+								<textarea id="froala-editor" name="berita" rows="10"><?= $row->Berita_Konten; ?></textarea>
 								<?= form_error('berita', '<small class="text-danger">', '</small>') ?>
 							</div>
 							<div class="form-group">

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Admin Login</title>
+	<title>Admin Register</title>
 		
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css');?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/font-awesome/4.5.0/css/font-awesome.min.css');?>">
@@ -34,7 +34,7 @@
 									<div class="widget-body">
 										<div class="widget-main">
 											<h4 class="header blue lighter bigger">
-												Login Aplikasi
+												Register Aplikasi
 											</h4>
 											
 
@@ -43,18 +43,32 @@
 											<!-- Flash Message -->
 											 <?= $this->session->flashdata('message'); ?>
 
-											<form name="logForm" id="theform" action="<?php echo base_url('auth/validasi_login'); ?>" method="post">
+											<form name="logForm" id="theform" action="<?php echo base_url('auth/validasi_register'); ?>" method="post">
 												<fieldset>
-													<label class="block clearfix">
+                          <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="email" required="required" id="email" name="email" autofocus />
+															<input type="text" class="form-control" placeholder="Username" id="username" name="username" required="required" autofocus />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" required="required" id="password" name="password"  />
+															<input type="email" class="form-control" placeholder="Email" id="email" name="email" required="required" />
+															<i class="ace-icon fa fa-user"></i>
+														</span>
+													</label>
+
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Password" id="password" name="password" required="required" />
+															<i class="ace-icon fa fa-lock"></i>
+														</span>
+													</label>
+
+                          <label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="password" class="form-control" placeholder="Retype Password" id="valPassword" name="valPassword" required="required" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -64,15 +78,15 @@
 													<div class="clearfix">
 														<button type="submit" name="btnLogin" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-sign-in"></i>
-															<span class="bigger-110">Login</span>
-															</button>
+															<span class="bigger-110">Register</span>
+														</button>
 													</div>
 
 													<div class="space-6"></div>
 												</fieldset>
 											</form>
 
-											<a href="<?php echo base_url('auth/register'); ?>">Belum Punya Akun ?</a>
+											<a href="<?php echo base_url('auth'); ?>">Sudah Punya Akun ?</a>
 										</div>									
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->

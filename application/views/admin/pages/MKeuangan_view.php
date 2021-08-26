@@ -1,44 +1,6 @@
 <!-- HEADER TITLE -->
 <div class="main-content">
     <div class="main-content-inner">
-        <script>
-            function ubahData(id) {
-                $("#m_modal").modal('show');
-                $.ajax({
-                    url: '<?php echo base_url('MKeuangan/edit'); ?>',
-                    method: "POST",
-                    data: {
-                        id: id
-                    },
-                    async: false,
-                    dataType: 'json',
-                    success: function(data) {
-                        var i;
-                        for (i = 0; i < data.length; i++) {
-                            $("#id").val(data[i].id_kk);
-                            $("#penerima").val(data[i].no_kk);
-                            $("#jumlah").val(data[i].kepala_kk);
-                            $("#keterangan").val(data[i].telp_kk);
-                            $("#alamat").val(data[i].alamat_kk);
-                            if (data[i].domisili_kk == "Y") {
-                                $("#domisili").attr("checked", "checked");
-                            }
-                        }
-                    }
-                });
-                return false;
-            }
-
-            function tambahData() {
-                $("#id").val('');
-                $("#penerima").val('');
-                $("#jumlah").val('');
-                $("#keterangan").val('');
-                $("#alamat").val('');
-                $("#domisili").val('');
-                return true
-            }
-        </script>
         <div class="breadcrumbs ace-save-state" id="breadcrumbs">
             <ul class="breadcrumb">
                 <li>
@@ -94,12 +56,12 @@
                             $saldo += ($row->in_transaksi - $row->out_transaksi);
                         ?>
                             <tr>
-                                <td><?= $row->tgl_transaksi; ?></td>
-                                <td><?= $row->penerima_transaksi; ?></td>
+                                <td><?= $row->transaksi_tanggal; ?></td>
+                                <td><?= $row->transaksi_penerima; ?></td>
                                 <td><?= $row->in_transaksi; ?></td>
                                 <td><?= $row->out_transaksi; ?></td>
                                 <td><?= $saldo; ?></td>
-                                <td><?= $row->keterangan_transaksi; ?></td>
+                                <td><?= $row->transaksi_keterangan; ?></td>
                             </tr>
                         <?php } ?>
                     </table>

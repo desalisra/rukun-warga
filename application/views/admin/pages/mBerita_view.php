@@ -47,13 +47,13 @@
 						foreach ($data as $row) { ?>
 							<tr>
 								<td align="center"><?= $no; ?></td>
-								<td><?= $row->judul_berita; ?></td>
-								<td class="center"><?= $row->tgl_berita; ?></td>
+								<td><?= $row->Berita_Judul; ?></td>
+								<td class="center"><?= $row->Berita_UpdateTime; ?></td>
 								<td align="center">
-									<a href="<?= base_url() . 'mBerita/edit/' . $row->id_berita; ?>" class="btn btn-success btn-sm" title="Edit" terget="_blank">
+									<a href="<?= base_url() . 'mBerita/edit/' . $row->Berita_Id; ?>" class="btn btn-success btn-sm" title="Edit" terget="_blank">
 										<i class="ace-icon fa fa-pencil-square-o"></i>
 									</a>
-									<a href="<?php echo base_url(); ?>mBerita/hapus/<?= $row->id_berita; ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini ?')">
+									<a href="<?php echo base_url(); ?>mBerita/hapus/<?= $row->Berita_Id; ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini ?')">
 										<i class="ace-icon fa fa-trash-o"></i>
 									</a>
 								</td>

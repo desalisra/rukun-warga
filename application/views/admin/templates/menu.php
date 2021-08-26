@@ -1,3 +1,5 @@
+
+<?php $akses = $this->session->userdata('user_akses'); ?>
 <div class="main-container ace-save-state" id="main-container">
 	<script type="text/javascript">
 		try {
@@ -18,10 +20,10 @@
 					<i class="menu-icon fa fa-tachometer"></i>
 					<span class="menu-text"> Dashboard </span>
 				</a>
-
 				<b class="arrow"></b>
 			</li>
 
+			<?php if ($akses == "ADMIN") { ?>
 			<li class="">
 				<a href="<?= base_url('mVisiMisi') ?>">
 					<i class="menu-icon fa fa-building"></i>
@@ -31,6 +33,8 @@
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
+			<?php }?>
+			
 
 			<li class="">
 				<a href="<?= base_url('MKKHeader') ?>">
@@ -41,7 +45,8 @@
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
-
+			
+			<?php if ($akses == "ADMIN" || $akses == "OPRATION") { ?>
 			<li class="">
 				<a href="<?= base_url('mBerita') ?>">
 					<i class="menu-icon fa fa-newspaper-o"></i>
@@ -51,6 +56,7 @@
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
+			<?php }?>
 
 			<li class="">
 				<a href="<?= base_url('MSurat') ?>">
@@ -62,6 +68,7 @@
 				</a>
 			</li>
 
+			<?php if ($akses == "ADMIN") { ?>
 			<li class="">
 				<a href="<?= base_url('MKeuangan') ?>">
 					<i class="menu-icon fa fa-file-text"></i>
@@ -71,35 +78,7 @@
 					<b class="arrow fa fa-angle-right"></b>
 				</a>
 			</li>
-
-
-			<!-- <li class="">
-				<a href="#" class="dropdown-toggle">
-					<i class="menu-icon fa fa-list"></i>
-					<span class="menu-text"> LAPORAN </span>
-					<b class="arrow fa fa-angle-down"></b>
-				</a>
-				<b class="arrow"></b>
-				<ul class="submenu">
-
-					<li class="">
-						<a href="<?php echo site_url('laporan'); ?>">
-							<i class="menu-icon fa fa-caret-right"></i>
-							Laporan
-						</a>
-						<b class="arrow"></b>
-					</li>
-
-					<li class="">
-						<a href="#">
-							<i class="menu-icon fa fa-caret-right"></i>
-							Sub Menu 2.2
-						</a>
-						<b class="arrow"></b>
-					</li>
-				</ul>
-			</li> -->
-
+			<?php }?>
 
 		</ul><!-- /.nav-list -->
 	</div>

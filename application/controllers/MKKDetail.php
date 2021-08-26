@@ -6,8 +6,8 @@ class MKKDetail extends CI_Controller
 	{
 		parent::__construct();
 
-		if ($this->session->userdata('admin_valid') == false) {
-			redirect('admin/login');
+		if ($this->session->userdata('user_login') == false) {
+			redirect('auth');
 		}
 
 		$this->load->model('admin/MKkDetail_model');

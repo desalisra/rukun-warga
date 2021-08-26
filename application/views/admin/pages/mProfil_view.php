@@ -13,9 +13,9 @@
 	                success : function(data){				
 	                    var i;
 	                    for(i=0; i<data.length; i++){
-							$("#id").val(data[i].id_admin);
-							$("#nama").val(data[i].nama_admin);
-							$("#email").val(data[i].email_admin);
+												$("#id").val(data[i].User_Id);
+												$("#nama").val(data[i].User_Username);
+												$("#email").val(data[i].User_Email);
 	                    }
 	                }
 	            });
@@ -37,11 +37,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="clearfix">
-						<h4 class="pink">
-							<i class="ace-icon fa fa-hand-o-right icon-animated-hand-pointer blue"></i>
-							Akun Administrator
-							<div class="pull-right tableTools-container"></div>
-						</h4>
+						<h4 class="pink">Akun Administrator</h4>
 					</div>
 					<div class="table-header">
 							Hasil untuk "Akun Admintrator"
@@ -54,8 +50,9 @@
 						<thead>
 							<tr>    
 								<th class="center" width="10%">No</th>
-								<th class="center" width="40%">Nama Admin</th>
-								<th class="center" width="40%">Email</th>
+								<th class="center" width="30%">Nama Admin</th>
+								<th class="center" width="30%">Email</th>
+								<th class="center" width="20%">Role</th>
 								<th class="center" >
 									<a href="#m_kategori" onclick="return tambah_kategori('0');" class="tooltip-info" data-toggle="modal" data-rel="tooltip" title="Tambah">
 									<span class="blue"><i class="ace-icon fa fa-search-plus bigger-120"></i></span></a>
@@ -67,16 +64,17 @@
 								foreach ($data as $row) { ?>
 							<tr>
 								<td align="center"><?php echo $no; ?></td>
-								<td><?= $row->nama_admin; ?></td>
-								<td><?= $row->email_admin; ?></td>
+								<td><?= $row->User_Username; ?></td>
+								<td><?= $row->User_Email; ?></td>
+								<td><?= $row->User_Akses; ?></td>
 								<td align="center">
 									<a href="#" class="tooltip-success" data-rel="tooltip" title="Ubah" 
-										onclick="ubahData(<?= $row->id_admin; ?>)">
+										onclick="ubahData(<?= $row->User_Id; ?>)">
 										<span class="green">
 											<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 										</span>
 									</a>
-									<a href="<?php echo site_url(); ?>/mProfil/hapus/<?= $row->id_admin; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
+									<a href="<?php echo site_url(); ?>/mProfil/hapus/<?= $row->User_Id; ?>" class="tooltip-error" data-rel="tooltip" title="Hapus" onclick="return confirm('Apakah Anda yakin ingin menghapus akun ini')">
 										<span class="red">
 											<i class="ace-icon fa fa-trash-o bigger-120"></i>
 										</span>
@@ -136,10 +134,14 @@
 							</tr>
 							<tr>
 								<td style="width: 25%">
-									<label for="gambar">Profil Picture</label>
+									<label for="akses">Hak Akses</label>
 								</td>
 								<td style="width: 25%">
-									<input type="file" name="gambar" class="form-control-file" id="gambar">
+									<select class="form-control" name="akses" id="akses">
+										<option value=""> -- Hak Akses -- </option>
+										<option value="ADMIN">ADMIN</option>
+										<option value="OPRATION">OPRATION</option>
+									</select>
 								</td>
 							</tr>
 							

@@ -7,16 +7,24 @@ class auth_model extends CI_Model {
         parent::__construct();		
     }
 
-    // public function daftar()
-    // {
-    // 	$nama = htmlspecialchars($this->input->post('nama_user',true));
-    // 	$email = htmlspecialchars($this->input->post('email_user',true));
-    // 	$password = $this->input->post('password');
-    // 	$pass = md5($password);
+		public function email_exist($email)
+		{
+    	return $this->db->query("SELECT * FROM tb_users WHERE user_email = '$email'")->num_rows();
+    }
 
-    // 	$query = $this->db->query("INSERT INTO tb_user(nama_user,email_user,pass_user,level)
-    //                 VALUES (UPPER('$nama'),'$email','$pass','USER')");
-    // }
+    public function register()
+    {
+    	$username = htmlspecialchars($this->input->post('username',true));
+    	$email = htmlspecialchars($this->input->post('email',true));
+    	$password = $this->input->post('password');
+
+			// Enkrip Password
+			$password = MD5($password);
+
+			// Insert ke Database
+    	$query = $this->db->query("INSERT INTO tb_users (user_username,user_email,user_password,user_akses)
+                    VALUES (UPPER('$username'),'$email','$password','USER')");
+    }
 
     public function validasi_login()
     {
@@ -25,22 +33,22 @@ class auth_model extends CI_Model {
 		$password = $this->input->post('password');
 		
 		//enkripsi password
-		$pass	= md5($password);
+		$password	= md5($password);
 		
 		//cek database email dan password sama atau tidak
-		$q_data		= $this->db->query("SELECT * FROM tb_admin WHERE 
-							email_admin = '$email' AND pass_admin = '$pass'");
+		$q_data		= $this->db->query("SELECT * FROM tb_users WHERE user_email = '$email' AND user_password = '$password'");
 		
 		$n_data		= $q_data->num_rows();
 		$r_data		= $q_data->row();
 		
 		if ($n_data === 1) {				
 			$data = array(
-                    'admin_id' => $r_data->id_admin,
-                    'admin_nama' => $r_data->nama_admin,
-                    'admin_img' => $r_data->img_admin,
-					'admin_valid' => true
-                    );
+				'user_id' => $r_data->User_Id,
+				'user_nama' => $r_data->User_Username,
+				'user_akses' => $r_data->User_Akses,
+				'user_login' => true
+			);
+
 			$this->session->set_userdata($data);			
 		} else {
 			$this->session->set_flashdata(
@@ -54,8 +62,14 @@ class auth_model extends CI_Model {
 					Email atau Password salah
 				</div>'
 	        );
-	        redirect('admin/login'); 
+	        redirect('auth'); 
 		}
+	}
+
+	public function status_akun()
+	{
+		$userId = $this->session->userdata('user_id');
+		return $this->db->query("SELECT KKH_Status FROM tb_kk_header WHERE KKH_UpdateID = '$userId'")->row();
 	}
     
 }
